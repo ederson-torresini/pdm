@@ -37,10 +37,10 @@ Com o tempo, ganhou músculos e cicatrizes. Naturalmente, era preciso atualizar 
 
 Agora a cobra ia fumar.
 ---
-Avançar para o [[Pré-História]].</tw-passagedata><tw-passagedata pid="4" name="Cabeamento Estruturado" tags="" position="601,300" size="100,100">Cabeamento Estruturado
+Avançar para o [[Pré-História]].</tw-passagedata><tw-passagedata pid="4" name="Cabeamento Estruturado" tags="" position="500,301" size="100,100">Cabeamento Estruturado
 ---
 ---
-Ler sobre o [[TCC da Luana|TCC: Luana Beatriz da Silva]].</tw-passagedata><tw-passagedata pid="5" name="TCC: Luana Beatriz da Silva" tags="" position="702,501" size="100,100">TCC: Luana Beatriz da Silva
+Ler sobre o [[TCC da Luana|TCC: Luana Beatriz da Silva]].</tw-passagedata><tw-passagedata pid="5" name="TCC: Luana Beatriz da Silva" tags="" position="601,499" size="100,100">TCC: Luana Beatriz da Silva
 ---
 Projeto de Reestruturação do Cabeamento Estruturado do Campus São José
 ---
@@ -60,35 +60,29 @@ Pensa neste livro como um jogo não linear. Ao longo da leitura, a trama se dese
 Avançar para [[Esclarecimentos]].</tw-passagedata><tw-passagedata pid="8" name="OpenStack" tags="" position="1300,100" size="100,100">OpenStack desbloqueado!
 ---
 Projeto pessoal.
----</tw-passagedata><tw-passagedata pid="9" name="Pré-História" tags="" position="500,100.5" size="100,100">Pré-História
+---</tw-passagedata><tw-passagedata pid="9" name="Pré-História" tags="" position="501,100.5" size="100,100">Pré-História
 ---
-Em todos esses anos nessa indústria vital, essa era a primeira que isso acontecia: um movimento de padronização no IFSC. Porém, a cultura original da antiga ETFSC, e depois CEFETSC, era de descentralização e independência em cada câmpus, portanto era preciso começar de básico. Além disso, havia  tanto soluções de código aberto como soluções proprietárias com seu respectivo licenciamento. E agora, investir em licença ou capacitação? Confiança e redundância em hardware ou em software? Quais as diretrizes a serem seguidas? Como alinhá-las com políticas de TI do IFSC para chegar a números de aquisição e operação viáveis? Não seria uma tarefa fácil.
+Em todos esses anos nessa indústria vital, essa era a primeira que isso acontecia: um movimento de padronização no IFSC. Porém, a cultura original da antiga ETFSC, e depois CEFETSC, era de descentralização e independência em cada câmpus, portanto era preciso começar de básico. Além disso, havia  tanto soluções de código aberto como soluções proprietárias com seu respectivo licenciamento. E agora, investir em licença ou capacitação? Confiança e redundância em //hardware// ou em //software//? Quais as diretrizes a serem seguidas? Como alinhá-las com políticas de TI do IFSC para chegar a números de aquisição e operação viáveis? Não seria uma tarefa fácil.
 
-Para encurtar esta história, vou me basear apenas nos três pilares que se tornaram as três virtualizações trabalhadas ao longo dos últimos cinco anos. Elas juntas formam a linha mestre para as nossas escolhas de padrões, protocolos e tecnologias há bastante tempo. Em primeiro, a virtualização de armazenamento: como entregar, seja via protocolo ou serviço, blocos de dados ou sistemas de arquivos em rede, de forma independente da estrutura física onde estão os bits. Na sequência, a virtualização de rede: interfaces e redes virtuais entre máquinas e equipamentos de rede. Por último, a virtualização de processamento: de isolamento de processo, passando por paravirtualização até chegar a virtualização plena de máquinas virtuais completas. Em resumo: vamos voltar um pouco no tempo e entender como fizemos um SDDC no câmpus São José a partir do nosso legado tecnológico e, principalmente, que possa ser expandido para todo o Instituto.
-
-Comecemos com o óbvio: armazenamento. Nos anos 2010, havia poucas soluções disponíveis. Nos cenários menores, discos locais eram usados em conjunto - LVM, por exemplo - e compartilhados por NFS e/ou SMB/CIFS para outros computadores e usuários finais. DFS para os fortes de coração. E as cópias de segurança? Guardadas em outros discos mecânicos e fitas magnéticas, como DDDS ou LTO - ou tape library. Tão chique quanto uma tape library era o serviço de armazenamento remoto: uma combinação de motoboy e uma empresa que locava espaço em cofres. Obrigado, Ceph! E nem preciso dizer que chique não combina com escola técnica, não é mesmo? Nos cenários maiores, por sua vez, já havia a centralização e mapeamento por ISCSI ou NFS para outros computadores, mas SMB/CIFS também estava presente. De código aberto, o NAS mais popular era FreeNAS, enquanto que de SAN os equipamentos davam as caras nos pregões de compra.
-
-Sobre processamento, fora algumas experiências com VirtualBox, Xen e o líder inconteste de virtualização, VMWare. Em 2012, houve um movimento que reforçou esse pensamento de escalabilidade vertical: o par blade + storage.
-
-É inegável a qualidade dessa solução de hardware e software altamente redundante, com alto desempenho e sistema de virtualização homologado. Do ponto de vista de compatibilidade e conformidade, tudo certo. O ponto de discórdia era outro: o custo  global de investimento (TCO). Sim, havia sistemas que deveriam estar disponíveis e com qualidade de serviço, mas será que essa era a solução natural? Não havia alternativas? O que as Universidades e outros Institutos usavam?
+Para encurtar esta história, vou me basear apenas nos três pilares que se tornaram as três virtualizações trabalhadas ao longo dos últimos cinco anos. Elas juntas formam a linha mestre para as nossas escolhas de padrões, protocolos e tecnologias há bastante tempo. Em primeiro, a virtualização de armazenamento: como entregar, seja via protocolo ou serviço, blocos de dados ou sistemas de arquivos em rede, de forma independente da estrutura física onde estão os bits. Na sequência, a virtualização de rede: interfaces e redes virtuais entre máquinas e equipamentos de rede. Por último, a virtualização de processamento: de isolamento de processo, passando por virtualização plena de máquinas virtuais completas até chegar a contêineres. Em resumo: vamos voltar um pouco no tempo e entender como fizemos uma nuvem privada (em breve híbrida!) no câmpus São José a partir do nosso legado tecnológico e, principalmente, que possa ser expandido para todo o Instituto.
 
 Era preciso ampliar os horizontes. Pensar fora da caixa. Mais especificamente, no //software//.
 ---
-Avançar para [[Cabeamento Estruturado]].
-Pular tudo sobre camadas Física e Enlace e ir direto para [[Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="10" name="TCC: Rafael Turnes da Silveira" tags="" position="1100,500.5" size="100,100">TCC: Alexandre Marquez Filho
+A partir deste ponto, a história se bifurca em dois caminhos diferentes. O primeiro segue uma abordagem em camadas, tratando primeiro do [[Cabeamento Estruturado]] do câmpus São José.
+O segundo caminho ignora tudo sobre camadas Física e Enlace e vai direto para [[mapeamento de serviços em rede|Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="10" name="TCC: Rafael Turnes da Silveira" tags="" position="1001,500.5" size="100,100">TCC: Alexandre Marquez Filho
 ---
 OpenStack com Open vSwitch
 ---
 Avançar para o [[Plano de Dominação Mundial]].
 (if: (history:) contains &quot;TCCs&quot;)[Ir para o Salão do [[TCCs]].]
-(set: $tccs to it + 1)</tw-passagedata><tw-passagedata pid="11" name="TCCs" tags="" position="901,700.5" size="100,100">TCCs
+(set: $tccs to it + 1)</tw-passagedata><tw-passagedata pid="11" name="TCCs" tags="" position="801,700.5" size="100,100">TCCs
 ---
 Sobre cabeamento estruturado, tem o trabalho da [[Luana|TCC: Luana Beatriz da Silva]].
 
 Em relação a mapeamento de serviços, o [[Alexandre|TCC: Alexandre Marquez Filho]] fez um trabalho de revisão.
 
 Sobre SDDC, o [[Rafael|TCC: Rafael Turnes da Silveira]] estudou SDDC e SDN.
----</tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="" position="900,501" size="100,100">TCC: Alexandre Marquez Filho
+---</tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="" position="800,501" size="100,100">TCC: Alexandre Marquez Filho
 ---
 ---
 Avançar para [[SDDC]].
