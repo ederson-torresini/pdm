@@ -16,21 +16,18 @@
 
 </script><tw-passagedata pid="1" name="SDDC" tags="" position="900,100" size="100,100">SDDC
 ---
-//São José, 2014. Tarde da noite. No laboratório de experimentos do Professor, Turnes tenta uma cartada final para dissuadi-lo do plano de dominação:
-- &quot;Professor, acredita em mim, se construir eles virão.&quot;
-- &quot;Não desta vez, Turnes. Eles são lisos como enguias. Precisamos ter certeza de que dará certo.&quot;
-- &quot;Mas como fazer isso? Não podemos apenas conversar civilizadamente?!&quot;
-- &quot;Não! Só tem um jeito: iremos obrigá-los a usar as nossas ferramentas. Hoje, São José; amanhã, o IFSC; e depois, o mundo!&quot;//
+No ano de 2013 já era comum falarmos de infraestrutura redundante e serviços agregados. Nas camadas inferiores, era o trio VLAN, STP e agregação de enlace com LACP que foram escolhidos para oferecer disponibilidade, redundância e desempenho em rede que já falávamos. O trabalho do Alexandre projetava o mesmo para a camada de aplicação: redundância e distribuição de carga. Todas as aplicações rodavam em (no mínimo) pares, começando por DNS, a balancear a carga para os serviços //front-end// HTTP, a fazer outra distribuição para os serviços //back-end// HTTP. 
 
-Meu primeiro contato com //software-defined data center// (SDDC) foi no trabalho de conclusão de curso (TCCs) de Rafael Turnes da Silveira. Uma fagulha para uma mudança radical em como enxergar centros de armazenamento e processamento de dados. Algo que iria afetar dali em diante a minhão visão de como fazer pesquisa aplicada em cursos técnicos e superiores de tecnologia: um único grande problema a ser analisado e sintetizado ao longos de vários anos. É a semente do Plano de Dominação Mundial.
+Até pensamos em fazer tradução de vários protocolos para HTTP, como por exemplo FTP e XMPP, mas desistimos pelo esforço necessário: melhor investir em novas aplicações que traduzir as antigas. Ao invés de //gateways// para o legado, novas soluções.
+
+Porém, ainda assim o custo operacional era alto: mesmo redundante, a infraestrutura era muito estática. E o pior: essa distribuição de carga era feita manualmente. Não havia ferramenta integrada a solução final para atender a isso.
+
+Mais um passo... E aí surgiu o Rafael falando de SDDC. Esta foi a semente do Plano de Dominação Mundial.
 ---
 Ler sobre o [[TCC do Rafael|TCC: Rafael Turnes da Silveira]].
 Pular o TCC e avançar direto para o [[Plano de Dominação Mundial]].
 </tw-passagedata><tw-passagedata pid="2" name="Plano de Dominação Mundial" tags="" position="1100,101" size="100,100">Plano de Dominação Mundial
 ---
-//O Professor já teve dias melhores, mas não consegue abandonar o posto. São muitos os segredos escondidos nos recônditos na alma.//
-
-O meu berço é a tecnologia da informação. Desde 1999 trabalho com problemas sistêmicos, disponibilidade de serviço, garantias etc. É o hábito.
 ---
 Avançar para [[OpenStack]].
 </tw-passagedata><tw-passagedata pid="3" name="Esclarecimentos" tags="" position="300,100" size="100,100">Esclarecimentos
@@ -53,7 +50,17 @@ Projeto de Reestruturação do Cabeamento Estruturado do Campus São José
 Avançar para [[Mapeamento de Serviços]].
 </tw-passagedata><tw-passagedata pid="6" name="Mapeamento de Serviços" tags="" position="700,100" size="100,100">Mapeamento de Serviços
 ---
-Demanda da TI, trabalho do Alexandre.
+Em 2012 tivemos o recomeço do calendário maia. Era um sinal de grandes mudanças.
+
+Em São José, havia alguns servidores de rack com VMWare ESXi. O VMFS cuidava dos discos locais, o backup era feito por fitas LTO, e as máquinas virtuais eram criadas por demanda. Foi um progresso artesanal, cadenciado, mas que poderia ser melhorado com a consolidação dos serviços, sem qualquer intervenção manual na infraestrutura física. Era um pequeno passo, mas necessário. E Alexandre Marquez Filho, neste mesmo ano de 2012, defendeu o TCC intitulado **Infraestrutura Orientada a SaaS**. A proposta: analisar os serviços oferecidos nas doze máquinas virtuais e propor disponibilidade, redundância e desempenho reorganizando-os.
+
+Algumas curiosidades apareceram no meio do caminho, e foram mais do que efeitos colaterais positivos. Os serviços gerenciais de TI atendiam as necessidades? Sim. Os de rede local, infraestrutura básica para dispositivos terminais de rede? Sim. Agora, os serviços de Internet ofereciam mais que isso. Eram os primeiros sinais de como oferecer serviços em rede no câmpus. A epifania (primeira de muitas): por que não oferecer todos os serviços sobre HTTP? Estamos falando de WebDAV, webmail, blog, wiki, fórum etc.
+
+Não era um pequeno passo. Era um grande salto. Algo precisava ser feito. E seria.
+
+A ação de participar junto a TI começou nessa época. Do lado teórico, a pesquisa aplicada foi a base conceitual, a pedra angular da arquitetura da solução. Do lado prático, eu comecei a visitar mais vezes a sala da TI. Foi um processo de aproximação, de alinhamento, de ajuste fino das funções e limites.
+
+Estava surgindo o modelo São José de trabalhar: orientação de pesquisa dos alunos em pesquisa aplicada, e depois a evangelização junto a equipe de TI. Mas para evangelizar nessa área, não basta dizer para construir que eles virão. É preciso, para usar um termo do meio importado do inglês, sujar as mãos(click-replace: &quot;sujar as mãos&quot;)[//get your hands dirty//].
 ---
 Ler sobre o [[TCC do Alexandre|TCC: Alexandre Marquez Filho]].
 Pular o TCC e avançar direto para o [[SDDC]].
@@ -81,7 +88,15 @@ A partir deste ponto, a história se bifurca em dois caminhos diferentes. O prim
 O segundo caminho ignora tudo sobre camadas Física e Enlace e vai direto para [[mapeamento de serviços em rede|Mapeamento de Serviços]].
 </tw-passagedata><tw-passagedata pid="10" name="TCC: Rafael Turnes da Silveira" tags="" position="1001,500" size="100,100">(set: $tccs to it + 1)TCC: Rafael Turnes da Silveira
 ---
-OpenStack com Open vSwitch
+//São José, 2014. Tarde da noite. No laboratório de experimentos do Professor, Turnes tenta uma cartada final para dissuadi-lo do plano de dominação:
+- &quot;Professor, acredita em mim, se construir eles virão.&quot;
+- &quot;Não desta vez, Turnes. Eles são lisos como enguias. Precisamos ter certeza de que dará certo.&quot;
+- &quot;Mas como fazer isso? Não podemos apenas conversar civilizadamente?!&quot;
+- &quot;Não! Só tem um jeito: iremos obrigá-los a usar as nossas ferramentas. Hoje, São José; amanhã, o IFSC; e depois, o mundo!&quot;//
+
+Meu primeiro contato com //software-defined data center// (SDDC) foi no trabalho do Rafael. Uma fagulha para uma mudança radical em como enxergar centros de armazenamento e processamento de dados. Algo que iria afetar dali em diante a minhão visão de como fazer pesquisa aplicada em cursos técnicos e superiores de tecnologia: um único grande problema a ser analisado e sintetizado ao longos de vários anos.
+
+Eu não enxergava mais a infraestrutura física e lógica como um agregado de serviços. Eu já conseguia ver a nuvem privada e sua base na Web.
 ---
 Avançar para o [[Plano de Dominação Mundial]].
 </tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="" position="801,700" size="100,100">Salão dos TCCs
@@ -94,10 +109,16 @@ Sobre SDDC, o [[Rafael|TCC: Rafael Turnes da Silveira]] estudou SDDC e SDN.
 ---
 </tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="" position="800,501" size="100,100">(set: $tccs to it + 1)TCC: Alexandre Marquez Filho
 ---
+O que se percebeu , ao analisar as máquinas virtuais e seus serviços, foi  uma lista de vários servidores, em especial HTTP, que poderiam ser agregados em apenas um. Feito o mapeamento de serviços, foram estabelecidas as relações e dependências (acredita, dá trabalho). Por fim, foi proposto um modelo com uma visão sistêmica sobre o todo: máquinas virtuais redundantes para oferecerem serviços equivalentes. Os serviços, inclusive, foram organizados em três categorias:
+* Gerência: de uso exclusivo da TI, como por exemplo SSH e SNMP.
+* Rede local: de alcance reduzido na rede, servem para fornecer aos clientes recursos de rede, como por exemplo DHCP, DNS, LDAP e NTP.
+* Internet: os serviços voltados aos usuários finais. Estes, por sua vez, estavam subdivididos em:
+** Compartilhamento de arquivos: SMB/CIFS e HTTP.
+** Comunicação: correio eletrônico e outros, como POP3, IMAP e SMTP.
 ---
 Avançar para [[SDDC]].
 </tw-passagedata><tw-passagedata pid="13" name="Rodapé: Desbloqueio de salões" tags="footer" position="1001,899.5" size="100,100">(if: (history:) contains &quot;OpenStack&quot; and (passage:)&#39;s name is not &quot;Salão do OpenStack&quot;)[Ir para o [[Salão do OpenStack]].]
-(if: $xps &gt;= 3 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[Ir para o [[Salão dos TCCs]].]
+(if: $tccs is 3 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[Desbloqueado o [[Salão dos TCCs]].](else-if: $tccs &gt; 3 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[Ir para o [[Salão dos TCCs]].]
 </tw-passagedata><tw-passagedata pid="14" name="Salão do OpenStack" tags="" position="1201,699.5" size="100,100">Salão do Openstack
 ---
 O TCC do [[Rafael|TCC: Rafael Turnes da Silveira]] antecede o projeto de OpenStack do IFSC câmpus São José. Na sequência, há um movimento inicial do [[projeto de nuvem|OpenStack]].
