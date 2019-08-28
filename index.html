@@ -89,8 +89,11 @@ Pensa neste livro como um jogo não linear. Ao longo da leitura, a trama se dese
 Avançar para [[Esclarecimentos]].
 </tw-passagedata><tw-passagedata pid="8" name="OpenStack" tags="" position="1300,100" size="100,100">OpenStack
 ---
-A primeira nuvem privada do câmpus São José foi com OpenStack. Com 100% de código aberto, do (link-reveal: &quot;OpenStack em si&quot;)[(open-url: &quot;https://opendev.org/openstack&quot;)] até a configuração do ambiente, foi um esforço de cerca de 6 meses para estudar, implantar, testar e validar o primeiro conjunto de serviços para denominar aquela infraestrutura, com orgulho, de nuvem.
+A primeira nuvem privada do câmpus São José foi com OpenStack. Com 100% de código aberto, do (link-reveal: &quot;OpenStack em si&quot;)[(open-url: &quot;https://opendev.org/openstack&quot;)] até a configuração do (link-reveal: &quot;ambiente&quot;)[(open-url: &quot;https://github.com/boidacarapreta/openstack-ifsc&quot;)], foi um esforço de cerca de 6 meses para estudar, implantar, testar e validar o primeiro conjunto de serviços para denominar aquela infraestrutura, com orgulho, de nuvem.
+
+O OpenStack foi, sem dúvida alguma, o primeiro contato real e direto com um (link-reveal: &quot;projeto de escala&quot;)[(open-url: &quot;https://www.stackalytics.com/&quot;)]. Código, documentação, tudo refletia a expressiva comunidade de código aberto que movimentava a plataforma. E quando digo plataforma, quero dizer vários e vários projetos e sistemas que compartilham premissas, códigos, APIs etc. O resultado é toda uma infraestrutura de virtualização de armazenamento, processamento e rede, além de ferramentas de monitoramento e configuração.
 ---
+Avançar para [[IaC]].
 (unless: (history:) contains &quot;Salão do OpenStack&quot;)[Desbloqueado o acesso ao [[Salão do OpenStack]].]
 </tw-passagedata><tw-passagedata pid="9" name="Pré-História" tags="" position="501,100" size="100,100">Pré-História
 ---
@@ -148,7 +151,13 @@ Avançar para [[SDDC]].
 (if: $tccs is 3 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[Desbloqueado o [[Salão dos TCCs]].](else-if: $tccs &gt; 3 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[Ir para o [[Salão dos TCCs]].]
 </tw-passagedata><tw-passagedata pid="14" name="Salão do OpenStack" tags="" position="1201,699.5" size="100,100">Salão do Openstack
 ---
-O TCC do [[Rafael|TCC: Rafael Turnes da Silveira]] antecede o projeto de OpenStack do IFSC câmpus São José. Na sequência, há um movimento inicial do [[projeto de nuvem|OpenStack]].
+O TCC do [[Rafael|TCC: Rafael Turnes da Silveira]] antecede o projeto de OpenStack do IFSC câmpus São José. Na sequência, há um movimento inicial do [[projeto de nuvem|OpenStack]] com [[infraestrutura como código|IaC]].
+---
+</tw-passagedata><tw-passagedata pid="15" name="IaC" tags="" position="1501,101" size="100,100">//Infrastructure-as-Code// (IaC)
+---
+Implantar e manter operacional o OpenStack foi um marco: associado à implantação da nuvem privada, também estava em curso o desenvolvimento de uma ideia: a automatização de ambiente. Estava claro que manter um conjunto de servidores, qualquer que fosse o tamanho com OpenStack, seria inviável de forma manual. Havia muitos arquivos e serviços com informações correlacionadas. Era, portanto, um requisito essencial do sistema para possibilitar a sua manutenção: automatizar o máximo possível. E à época uma das ferramentas mais populares era o Puppet. E como basicamente todos os arquivos eram arquivos simples, de texto, o controle de versão dessa automatização deu origem à cultura de infraestrutura como código (IaC) que (link-reveal: &quot;temos até hoje no câmpus&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc&quot;)].
+
+Com a escolha do Puppet, foi possível experimentar, testar, validar, documentar o código. A ideia de um servidor central, com controle de versão de todos os arquivos, garantia os estados de pacotes, arquivos de configuração e serviços em execução, permitindo até a manutenção periódica dos sistemas (garantindo que atualizações automática dos SOs não afetassem os serviços, embora o risco fosse baixo). Porém, mais importante que essa automatização era a cultura DevOps em implantar e manter toda uma nova infraestrutura em construção.
 ---
 </tw-passagedata></tw-storydata>
 
