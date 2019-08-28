@@ -11,9 +11,21 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Plano de Dominação Mundial" startnode="7" creator="Twine" creator-version="2.3.3" ifid="CA058C3A-902E-408E-BB25-76B8436C0862" zoom="0.6" format="Harlowe" format-version="3.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="Plano de Dominação Mundial" startnode="7" creator="Twine" creator-version="2.3.3" ifid="CA058C3A-902E-408E-BB25-76B8436C0862" zoom="0.6" format="Harlowe" format-version="3.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
+}
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 </script><tw-passagedata pid="1" name="SDDC" tags="" position="900,100" size="100,100">SDDC
@@ -174,7 +186,7 @@ A história está no GitHub:
 * Outubro/2014: monitoramento de recursos do ambiente (Ceilometer).
 * Dezembro/2014: versão 1.0 do ambiente com Icehouse.
 Melhor um vídeo para explicar?
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/S-7xe2DmM6Q&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/S-7xe2DmM6Q&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 Durante o segundo semestre de 2015, foram feitos muitos testes com LBaaS, orquestração e autoescalonamento. Por questão de tempo, ficaram fora dos testes o DVR (//distributed virtual router//), Designate (DNS), Magnum (CaaS), Murano (catálogo de aplicações) e Manila (sistemas de arquivos compartilhado). Eu ainda não sabia que eles jamais veriam a luz do dia.
 
@@ -188,7 +200,7 @@ Avançar para [[OpenStack: v1.0]].
 O ano de 2015 foi de colher os frutos plantados durante as longas madrugadas depurando muitos logs de Python. A ideia, tímida porém ousada, mostrava-se mais estável em operação do que o imaginado. Estável mesmo: em janeiro desse ano, após meses sem falhas críticas, marquei a (link-reveal: &quot;versão v1.0 no repositório&quot;)[(open-url: &quot;https://github.com/boidacarapreta/openstack-ifsc/releases/tag/v1.0&quot;)].
 
 E, mãe, eu apareci na TV!
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/TZnOdABNgUs&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/TZnOdABNgUs&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 Já pensava em adicionar disponibilidade aos serviços, com redundância de processos entre as várias máquinas físicas. E foi quando comecei a entender a lógica de usar APIs HTTP para todos os serviços do OpenStack. Não havia conexões persistentes entre os serviços, sequer estados!
 
@@ -198,7 +210,8 @@ Ou eu poderia me aquietar um pouco, voltar a viver entre os homens na Terra e ir
 
 Mas o que os monges budistas fazem quando terminam a sua mandala de areia? Eles nos ensinam a transitoriedade da vida. E era exatamente isso que eu tinha em mente.
 ---
-Avançar para [[OpenStack: v1.1]].</tw-passagedata><tw-passagedata pid="18" name="OpenStack: v1.1" tags="" position="2102.666666666667,300.66666666666663" size="100,100">OpenStack: v1.1
+Avançar para [[OpenStack: v1.1]].
+</tw-passagedata><tw-passagedata pid="18" name="OpenStack: v1.1" tags="" position="2102.666666666667,300.66666666666663" size="100,100">OpenStack: v1.1
 ---
 Eu comecei a (me) preparar a migração para Juno. Meu cenário: sistema operacional LTS atualizado com as correções de segurança + OpenStack LTS atualizado com as (link-reveal: &quot;correções de segurança&quot;)[(open-url: &quot;https://ubuntu.com/about/release-cycle&quot;)]. O salto para Juno era a emoção que eu não precisava. E eu não tive:
 * Fevereiro/2015: migração para Juno.
@@ -209,15 +222,15 @@ Eu comecei a (me) preparar a migração para Juno. Meu cenário: sistema operaci
 ** Maio/2015: estabilizado o ambiente. Versão 1.1 com Juno.
 
 Mas (sempre tem um mas) a migração de Juno para Kilo foi diferente.
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/P9xM-a_GBF4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/P9xM-a_GBF4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 Todos os CHANGELOGs (o pior é que eu li todos eles) foram insuficientes para o que viria: a migração de Juno para Kilo. Entre 14 a 16 de julho de 2015, um interlúdio na minha vida: o som ininterrupto da máquina de café. 72 horas de trabalho.
 ---
 Avançar para [[OpenStack: v1.2]].
 </tw-passagedata><tw-passagedata pid="19" name="OpenStack: v1.2" tags="" position="2301.0000000000005,400.66666666666663" size="100,100">OpenStack: v1.2
 ---
-Mesmo com toda a automatização do Puppet, o controle de versão e o suporte mantido na versão LTS do sistema operacional, a atualização versão a versão do OpenStack se mostrou muito trabalhosa (e olha que eu gosto de café). Atenção aos 40 segundos:
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/P9xM-a_GBF4?start=38&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+Mesmo com toda a automatização do Puppet, o controle de versão e o suporte mantido na versão LTS do sistema operacional, a atualização versão a versão do OpenStack se mostrou muito trabalhosa (e olha que eu gosto de café). Para quem ainda não viu, atenção aos 40 segundos:
+&lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/P9xM-a_GBF4?start=38&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 Além disso, o uso regular de máquinas virtuais provou que estávamos sendo muito pouco eficientes no uso dos recursos computacionais. O que os professores e alunos, os clientes da nuvem, queriam era algo muito mais simples: serviços em rede. Ou seja, um GNU/Linux com init ou systemd e vários serviços ainda demandavam um esforço considerável de configuração inicial.
 
