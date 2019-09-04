@@ -26,11 +26,13 @@
 	width: 100%;
 	height: 100%;
 }
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
 
-</script><tw-passagedata pid="1" name="SDDC" tags="" position="900,101.66666666666667" size="100,100">(print: (passage:)&#39;s name)
+
+</script><tw-passagedata pid="1" name="SDDC" tags="" position="900,101" size="100,100">(print: (passage:)&#39;s name)
 ---
 No ano de 2013 já era comum falarmos de infraestrutura redundante e serviços agregados. Nas camadas inferiores, era o trio VLAN, STP e agregação de enlace com LACP que foram escolhidos para oferecer disponibilidade, redundância e desempenho em rede que já falávamos. O trabalho do Alexandre projetava o mesmo para a camada de aplicação: redundância e distribuição de carga. Todas as aplicações rodavam em (no mínimo) pares, começando por DNS, a balancear a carga para os serviços //front-end// HTTP, a fazer outra distribuição para os serviços //back-end// HTTP. 
 
@@ -71,7 +73,7 @@ Agora a cobra ia fumar.
 Avançar para o [[Pré-História]].</tw-passagedata><tw-passagedata pid="4" name="Cabeamento Estruturado" tags="" position="500,301" size="100,100">(print: (passage:)&#39;s name)
 ---
 ---
-Ler sobre o [[TCC da Luana|TCC: Luana Beatriz da Silva]].</tw-passagedata><tw-passagedata pid="5" name="TCC: Luana Beatriz da Silva" tags="" position="647.6666666666666,560.6666666666666" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
+Ler sobre o [[TCC da Luana|TCC: Luana Beatriz da Silva]].</tw-passagedata><tw-passagedata pid="5" name="TCC: Luana Beatriz da Silva" tags="" position="647,560" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
 ---
 Projeto de Reestruturação do Cabeamento Estruturado do Campus São José
 ---
@@ -106,14 +108,14 @@ A partir deste ponto, a texto deixa de ser (relativamente) linear, com seções 
 Avançar para [[IaC]].
 (unless: (history:) contains &quot;Salão do OpenStack&quot;)[Desbloqueado o acesso ao [[Salão do OpenStack]]. Nota importante: esses amplos salões têm várias passagens: exercite seu palácio da mente!]</tw-passagedata><tw-passagedata pid="9" name="Pré-História" tags="" position="501,100" size="100,100">(print: (passage:)&#39;s name)
 ---
-Em todos esses anos nessa indústria vital, essa era a primeira que isso acontecia: um movimento de padronização no IFSC. Porém, a cultura original da antiga ETFSC, e depois CEFETSC, era de descentralização e independência em cada câmpus, portanto era preciso começar de básico. Além disso, havia  tanto soluções de código aberto como soluções proprietárias com seu respectivo licenciamento. E agora, investir em licença ou capacitação? Confiança e redundância em //hardware// ou em //software//? Quais as diretrizes a serem seguidas? Como alinhá-las com políticas de TI do IFSC para chegar a números de aquisição e operação viáveis? Não seria uma tarefa fácil.
+Em todos esses anos nessa indústria vital, essa era a primeira vez que isso acontecia: um movimento de padronização no IFSC. Porém, a cultura original da antiga ETFSC, e depois CEFETSC, era de descentralização e independência em cada câmpus, portanto era preciso começar de básico. Além disso, havia  tanto soluções de código aberto como soluções proprietárias com seu respectivo licenciamento. E agora, investir em licença ou capacitação? Confiança e redundância em //hardware// ou em //software//? Quais as diretrizes a serem seguidas? Como alinhá-las com políticas de TI do IFSC para chegar a números de aquisição e operação viáveis? Não seria uma tarefa fácil.
 
 Para encurtar esta história, vou me basear apenas nos três pilares que se tornaram as três virtualizações trabalhadas ao longo dos últimos cinco anos. Elas juntas formam a linha mestre para as nossas escolhas de padrões, protocolos e tecnologias há bastante tempo. Em primeiro, a virtualização de armazenamento: como entregar, seja via protocolo ou serviço, blocos de dados ou sistemas de arquivos em rede, de forma independente da estrutura física onde estão os bits. Na sequência, a virtualização de rede: interfaces e redes virtuais entre máquinas e equipamentos de rede. Por último, a virtualização de processamento: de isolamento de processo, passando por virtualização plena de máquinas virtuais completas até chegar a contêineres. Em resumo: vamos voltar um pouco no tempo e entender como fizemos uma nuvem privada (em breve híbrida!) no câmpus São José a partir do nosso legado tecnológico e, principalmente, que possa ser expandido para todo o Instituto.
 
 Era preciso ampliar os horizontes. Pensar fora da caixa. Mais especificamente, no //software//.
 ---
 A partir deste ponto, a história se bifurca em dois caminhos diferentes. O primeiro segue uma abordagem em camadas, tratando primeiro do [[Cabeamento Estruturado]] do câmpus São José.
-O segundo caminho ignora tudo sobre camadas Física e Enlace e vai direto para [[mapeamento de serviços em rede|Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="10" name="TCC: Rafael Turnes da Silveira" tags="" position="1052.6666666666667,563.3333333333333" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
+O segundo caminho ignora tudo sobre camadas Física e Enlace e vai direto para [[mapeamento de serviços em rede|Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="10" name="TCC: Rafael Turnes da Silveira" tags="" position="1052,563" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
 ---
 //São José, 2014. Tarde da noite. No laboratório de experimentos do Professor, Turnes tenta uma cartada final para dissuadi-lo do plano de dominação:
 - &quot;Professor, acredita em mim, se construir eles virão.&quot;
@@ -136,7 +138,7 @@ Foi a primeira nuvem privada, em caráter experimental, de São José. Na verdad
 
 Com esse recurso foi possível desenvolver, boa parte a distância, uma proposta real e tangível a ser apreciada por todos os envolvidos.
 ---
-Avançar para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="" position="999.3333333333334,1005" size="100,100">(print: (passage:)&#39;s name)
+Avançar para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="" position="999,1005" size="100,100">(print: (passage:)&#39;s name)
 ---
 Sobre cabeamento estruturado, tem o trabalho da [[Luana|TCC: Luana Beatriz da Silva]].
 
@@ -144,7 +146,7 @@ Em relação a mapeamento de serviços, o [[Alexandre|TCC: Alexandre Marquez Fil
 
 Sobre SDDC, o [[Rafael|TCC: Rafael Turnes da Silveira]] estudou SDDC e SDN.
 
-Quanto a pesquisa em contêineres, o [[Nathan|TCC: Nathan Batista de Oliveira]] estudou o Kubernetes. De forma complementar o [[Raphael|TCC: Raphael Brito Reis]] pesquisou sistemas de arquivos distribuídos para a nova plataforma.</tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="" position="848.3333333333334,561" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
+Quanto a pesquisa em contêineres, o [[Nathan|TCC: Nathan Batista de Oliveira]] estudou o Kubernetes. De forma complementar o [[Raphael|TCC: Raphael Brito Reis]] pesquisou sistemas de arquivos distribuídos para a nova plataforma.</tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="" position="848,561" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
 ---
 O que se percebeu , ao analisar as máquinas virtuais e seus serviços, foi  uma lista de vários servidores, em especial HTTP, que poderiam ser agregados em apenas um. Feito o mapeamento de serviços, foram estabelecidas as relações e dependências (acredita, dá trabalho). Por fim, foi proposto um modelo com uma visão sistêmica sobre o todo: máquinas virtuais redundantes para oferecerem serviços equivalentes. Os serviços, inclusive, foram organizados em três categorias:
 * Gerência: de uso exclusivo da TI, como por exemplo SSH e SNMP.
@@ -153,9 +155,9 @@ O que se percebeu , ao analisar as máquinas virtuais e seus serviços, foi  uma
 ** Compartilhamento de arquivos: SMB/CIFS e HTTP.
 ** Comunicação: correio eletrônico e outros, como POP3, IMAP e SMTP.
 ---
-Avançar para [[SDDC]].</tw-passagedata><tw-passagedata pid="13" name="Rodapé: Desbloqueio de salões" tags="footer" position="1501,902.3333333333333" size="100,100">(if: (history:) contains &quot;OpenStack&quot; and (passage:)&#39;s name is not &quot;Salão do OpenStack&quot;)[&lt;br/&gt;Ir para o [[Salão do OpenStack]].](if: $tccs is 3 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[Desbloqueado o [[Salão dos TCCs]].](else-if: $tccs &gt; 4 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Ir para o [[Salão dos TCCs]].]
+Avançar para [[SDDC]].</tw-passagedata><tw-passagedata pid="13" name="Rodapé: Desbloqueio de salões" tags="footer" position="1501,902" size="100,100">(if: (history:) contains &quot;OpenStack&quot; and (passage:)&#39;s name is not &quot;Salão do OpenStack&quot;)[&lt;br/&gt;Ir para o [[Salão do OpenStack]].](if: $tccs is 3 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[Desbloqueado o [[Salão dos TCCs]].](else-if: $tccs &gt; 4 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Ir para o [[Salão dos TCCs]].]
 ---
-(if: (history:)&#39;s length &gt;= 2)[Jornada (for: each _passagem, ...(history:))[ → [[_passagem]]]]</tw-passagedata><tw-passagedata pid="14" name="Salão do OpenStack" tags="" position="1735.9999999999998,412.3333333333333" size="100,100">(print: (passage:)&#39;s name)
+(if: (history:)&#39;s length &gt;= 2)[Jornada (for: each _passagem, ...(history:))[ → [[_passagem]]]]</tw-passagedata><tw-passagedata pid="14" name="Salão do OpenStack" tags="" position="1735,412" size="100,100">(print: (passage:)&#39;s name)
 ---
 O TCC do [[Rafael|TCC: Rafael Turnes da Silveira]] antecede o projeto de OpenStack do IFSC câmpus São José. Na sequência, há um movimento inicial do [[projeto de nuvem|OpenStack]] com [[infraestrutura como código|IaC]], o que gerou uma [[bela história em versões|OpenStack: história em versões]]: [[v1.0|OpenStack: v1.0]], [[v1.1|OpenStack: v1.1]] e [[v1.2|OpenStack: v1.2]] (e acabou por aí).</tw-passagedata><tw-passagedata pid="15" name="IaC" tags="" position="1501,101" size="100,100">(print: (passage:)&#39;s name)
 ---
@@ -224,7 +226,7 @@ E o Puppet? É preciso lembrar que esse modelo cliente-servidor podia causar fal
 O resultado? Uma história mais curta desta vez:
 * Março/2016: versão 1.2 do ambiente com Kilo.
 ---
-Avançar para [[Ponto de inflexão]].</tw-passagedata><tw-passagedata pid="20" name="Kubernetes" tags="" position="1901.0000000000002,902.6666666666666" size="100,100">(print: (passage:)&#39;s name)
+Avançar para [[Ponto de inflexão]].</tw-passagedata><tw-passagedata pid="20" name="Kubernetes" tags="" position="1901,902" size="100,100">(print: (passage:)&#39;s name)
 ---
 O [[OpenStack]] operou por 3 anos. Os aparelhos foram desligados em dezembro de 2016, encerrando o primeiro ciclo de nuvem privada.
 
@@ -243,7 +245,7 @@ Foi com toda a certeza o ano de leitura, teste e implementação usando RESTful 
 
 E a causa da transformação foi cultural: DevOps estava em velocidade de cruzeiro. Se (link-reveal: &quot;a TI queria migrar as estações de trabalho&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/plano_migracao_desktop_linux&quot;)] para outra distribuição Linux, o ponto de partida já era automatizar: imagens usando FOG e instalação e manutenção de arquivos e aplicativos com Puppet.
 ---
-Avançar para [[Experimentações com Kubernetes]].</tw-passagedata><tw-passagedata pid="21" name="Ponto de inflexão" tags="" position="2097.6666666666665,600.0000000000001" size="100,100">(print: (passage:)&#39;s name)
+Avançar para [[Experimentações com Kubernetes]].</tw-passagedata><tw-passagedata pid="21" name="Ponto de inflexão" tags="" position="2097,600" size="100,100">(print: (passage:)&#39;s name)
 ---
 Era hora de abandonar OpenStack e Ceph, operacionais desde 2014? Nathan Batista de Oliveira, com seu TCC **Aplicações em Contêineres**, e Raphael Brito Reis, com **Teste de desempenho de sistemas de arquivos distribuídos em nuvem computacional privada no IFSC câmpus São José**, me ajudaram a responder. Começou oficialmente o estudo em Kubernetes e possíveis substitutos do Ceph - estável, mas complexo. Era a vez do Gluster?
 
@@ -257,15 +259,15 @@ Eu estava cada vez mais focado em [[infraestrutura como código|IaC]]. Sem quere
 ---
 Ler sobre o [[TCC do Nathan|TCC: Nathan Batista de Oliveira]].
 Ler sobre o [[TCC do Raphael|TCC: Raphael Brito Reis]].
-As primeiras âncoras da teia já foram fixadas. É hora de começar a fazer os primeiros anéis centrais... Para avançar com o livro, será preciso revisitar passagens que fazem relação com a próxima plataforma, (if: (history:) contains &quot;Kubernetes&quot;)[o [[Kubernetes]]](else:)[Kubernetes]. Até porque eu já mexia com [[contêineres|OpenStack: história em versões]], não é mesmo?</tw-passagedata><tw-passagedata pid="22" name="TCC: Nathan Batista de Oliveira" tags="" position="1274.3333333333335,560" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
+As primeiras âncoras da teia já foram fixadas. É hora de começar a fazer os primeiros anéis centrais... Para avançar com o livro, será preciso revisitar passagens que fazem relação com a próxima plataforma, (if: (history:) contains &quot;Kubernetes&quot;)[o [[Kubernetes]]](else:)[Kubernetes]. Até porque eu já mexia com [[contêineres|OpenStack: história em versões]], não é mesmo?</tw-passagedata><tw-passagedata pid="22" name="TCC: Nathan Batista de Oliveira" tags="" position="1274,560" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
 ---
 Nathan
 ---
-Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="23" name="TCC: Raphael Brito Reis" tags="" position="1454.333333333333,600" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
+Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="23" name="TCC: Raphael Brito Reis" tags="" position="1454,600" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)](print: (passage:)&#39;s name)
 ---
 Raphael
 ---
-Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="24" name="_passagem" tags="" position="1552.6666666666667,1037.3333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="Experimentações com Kubernetes" tags="" position="2101.0000000000005,1001" size="100,100">(print: (passage:)&#39;s name)
+Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="24" name="_passagem" tags="" position="1552,1037" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="Experimentações com Kubernetes" tags="" position="2101,1001" size="100,100">(print: (passage:)&#39;s name)
 ---
 A flexibilidade do Kubernetes impressionou. Com OpenStack, eu podia movimentar serviços, mas isso significava:
 0. Como boa prática (nem sempre eu fazia, reconheço), criar um ramo (//branch//) no repositório do Puppet, modificar os arquivos (DNS incluso) e esperar aplicar a nova configuração.
