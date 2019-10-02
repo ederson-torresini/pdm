@@ -42,7 +42,9 @@ tw-enchantment.link, tw-link, tw-link.visited {
 
 tw-enchantment.link:hover, tw-link:hover, tw-link.visited:hover {
 	color: #A68051;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -56,7 +58,7 @@ Porém, ainda assim o custo operacional era alto: mesmo redundante, a infraestru
 
 Mais uma vez, seguimos o //tao//. O caminho indicava um momento de reflexão: precisávamos estudar formas para mais dinamismo na infraestrutura. Em redes virtuais, o interesse estava em SDN, particularmente Open vSwitch, enquanto que em nuvem havia uma efervescência sobre as públicas, em especial AWS.
 
-Mais um passo... E aí surgiu o Rafael falando de SDDC. Esta foi a semente do Plano de Dominação Mundial.
+Mais um passo... E aí surgiu o Rafael falando de SDDC. E esta foi **a semente do Plano de Dominação Mundial**.
 ---
 Ler sobre o [[TCC do Rafael|TCC: Rafael Turnes da Silveira]].
 Pular o TCC e avançar direto para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="2" name="Plano de Dominação Mundial" tags="" position="1100,101" size="100,100">Meu primeiro contato com SDDC foi no trabalho do Rafael. Uma fagulha para uma mudança radical em como enxergar centros de armazenamento e processamento de dados. Algo que iria afetar dali em diante a minhão visão de como fazer pesquisa aplicada em cursos técnicos e superiores de tecnologia: um único grande problema a ser analisado e sintetizado ao longos de vários anos.
@@ -96,11 +98,11 @@ A ação de participar junto a TI começou nessa época. Do lado teórico, a pes
 Estava surgindo o modelo São José de trabalhar: orientação de pesquisa dos alunos em pesquisa aplicada, e depois a evangelização junto a equipe de TI. Mas para evangelizar nessa área, não basta dizer para construir que eles virão. É preciso, para usar um termo do meio importado do inglês, sujar as mãos(click-replace: &quot;sujar as mãos&quot;)[//get your hands dirty//].
 ---
 Ler sobre o [[TCC do Alexandre|TCC: Alexandre Marquez Filho]].
-Pular o TCC e avançar direto para o [[SDDC]].</tw-passagedata><tw-passagedata pid="7" name="Sobre o Livro" tags="" position="100,99" size="100,100">Este não é um livro convencional. Pelo menos, não o planejei assim. Como havia muitas referências entre as seções e notas de rodapé, parecia mais uma teia que uma linha. Assim, achei melhor deixar o leitor escolher o formato que achar mais agradável a leitura, inclusive pular etapas, ir direto ao assunto de interesse. Ou seguir pelos caminhos mais longos e recompensadores.
+Pular o TCC e avançar direto para o [[SDDC]].</tw-passagedata><tw-passagedata pid="7" name="Sobre o Livro" tags="" position="100,99" size="100,100">Este não é um livro convencional. Pelo menos, não o planejei assim. No começo da sua escrita, surgiam muitas referências entre as seções e notas de rodapé, parecendo mais uma teia que uma linha. Assim, achei melhor deixar o leitor escolher o formato que achar mais agradável a leitura, inclusive pular etapas, ir direto ao assunto de interesse. Ou seguir pelos caminhos mais longos e recompensadores.
 
 Pensa neste livro como um jogo não linear. Ao longo da leitura, a trama se desenvolve e torna-se mais pegajosa, até se transformar num labirinto com algumas (possíveis) saídas. É a minha pequena homenagem a jogos como Phantasy Star, do longínquo Master System, que me fizeram enxergar o futuro nos jogos digitais como ferramenta educacional, e autores extraordinários como Borges e sua Biblioteca de Babel, que me surpreendem e fascinam até hoje.
 ---
-Avançar para [[Esclarecimentos]].</tw-passagedata><tw-passagedata pid="8" name="OpenStack" tags="" position="1300,100" size="100,100">A primeira nuvem privada do câmpus São José foi com OpenStack. Com 100% de código aberto, do (link-reveal: &quot;OpenStack em si&quot;)[(open-url: &quot;https://opendev.org/openstack 🔗&quot;)] até a configuração do (link-reveal: &quot;ambiente&quot;)[(open-url: &quot;https://github.com/boidacarapreta/openstack-ifsc&quot;)], foi um esforço de cerca de 6 meses para estudar, implantar, testar e validar o primeiro conjunto de serviços para denominar aquela infraestrutura, com orgulho, de nuvem.
+Avançar para [[Esclarecimentos]].</tw-passagedata><tw-passagedata pid="8" name="OpenStack" tags="" position="1300,100" size="100,100">A primeira nuvem privada do câmpus São José foi com OpenStack. Com 100% de código aberto, do (link-reveal: &quot;OpenStack em si 🔗&quot;)[(open-url: &quot;https://opendev.org/openstack&quot;)] até a configuração do (link-reveal: &quot;ambiente 🔗&quot;)[(open-url: &quot;https://github.com/boidacarapreta/openstack-ifsc&quot;)], foi um esforço de cerca de 6 meses para estudar, implantar, testar e validar o primeiro conjunto de serviços para denominar aquela infraestrutura, com orgulho, de nuvem.
 
 O OpenStack foi, sem dúvida alguma, o primeiro contato real e direto com um (link-reveal: &quot;projeto de escala 🔗&quot;)[(open-url: &quot;https://www.stackalytics.com/&quot;)]. Código, documentação, tudo refletia a expressiva comunidade de código aberto que movimentava a plataforma. E quando digo plataforma, quero dizer vários e vários projetos e sistemas que compartilham premissas, códigos, APIs etc. O resultado é toda uma infraestrutura de virtualização de armazenamento, processamento e rede, além de ferramentas de monitoramento e configuração.
 ---
@@ -237,10 +239,12 @@ As primeiras âncoras da teia já foram fixadas. É hora de começar a fazer os 
 ---
 Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="23" name="TCC: Raphael Brito Reis" tags="" position="1454,600" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]Raphael
 ---
-Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="24" name="Experimentações com Kubernetes" tags="" position="2101,1001" size="100,100">A flexibilidade do Kubernetes impressionou. Com OpenStack, eu podia movimentar serviços, mas isso significava:
-0. Como boa prática (nem sempre eu fazia, reconheço), criar um ramo (//branch//) no repositório do Puppet, modificar os arquivos (DNS incluso) e esperar aplicar a nova configuração.
-0. O serviço de DNS, que também estava sob controle de versão no Puppet, tinha tempos baixos de TTL.
-CONTINUAR!!!</tw-passagedata><tw-passagedata pid="25" name="Cabeçalho: jornada do leitor" tags="header" position="102,400.83333333333337" size="100,100">(if: (history:)&#39;s length &gt;= 1)[|chamada&gt;[(link:&quot;[Jornada do leitor] → &quot;)[(show:?jornada)]]|jornada)[(for: each _passagem, ...(history:))[[[_passagem]] → ]]](else:)[Início da Jornada → ](print: (passage:)&#39;s name)
+Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="24" name="Experimentações com Kubernetes" tags="" position="2101,1001" size="100,100">A flexibilidade do Kubernetes impressionou. Com o [[OpenStack]], eu podia movimentar serviços, mas isso significava:
+0. Como boa prática (nem sempre eu fazia, reconheço - mentira, eu nunca fazia), criar um ramo (//branch//) no repositório do Puppet, modificar os arquivos (DNS incluso) e esperar aplicar a nova configuração.
+0. O serviço de DNS, que também estava sob controle de versão no Puppet, tinha tempos baixos de TTL. Mesmo assim, era necessário esperar esse tempo até sincronizar servidores e cache. Durante esse período, serviços antigos e novos rodavam em paralelo.
+0. Uma vez encerrada a janela de TTL do DNS, eu podia parar os serviços antigos. Claro, outra versão no respositório do Puppet.
+0. Depois de validado manualmente (nada de integração contínua!), ...
+CONTINUAR!!!</tw-passagedata><tw-passagedata pid="25" name="Cabeçalho: jornada do leitor" tags="header" position="102,400" size="100,100">(if: (history:)&#39;s length &gt;= 1)[|chamada&gt;[(link:&quot;[Jornada do leitor] → &quot;)[(show:?jornada)]]|jornada)[(for: each _passagem, ...(history:))[[[_passagem]] → ]]](else:)[Início da Jornada → ](print: (passage:)&#39;s name)
 ---
 </tw-passagedata></tw-storydata>
 
