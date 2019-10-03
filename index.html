@@ -136,7 +136,7 @@ Foi a primeira nuvem privada, em caráter experimental, de São José. Na verdad
 
 Com esse recurso foi possível desenvolver, boa parte a distância, uma proposta real e tangível a ser apreciada por todos os envolvidos.
 ---
-Avançar para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="" position="999,1005" size="200,100">Sobre cabeamento estruturado, tem o trabalho da [[Luana|TCC: Luana Beatriz da Silva]].
+Avançar para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="" position="1000.6666666666666,998.3333333333334" size="200,100">Sobre cabeamento estruturado, tem o trabalho da [[Luana|TCC: Luana Beatriz da Silva]].
 
 Em relação a mapeamento de serviços, o [[Alexandre|TCC: Alexandre Marquez Filho]] fez um trabalho de revisão.
 
@@ -149,11 +149,11 @@ Quanto a pesquisa em contêineres, o [[Nathan|TCC: Nathan Batista de Oliveira]] 
 ** Compartilhamento de arquivos: SMB/CIFS e HTTP.
 ** Comunicação: correio eletrônico e outros, como POP3, IMAP e SMTP.
 ---
-Avançar para [[SDDC]].</tw-passagedata><tw-passagedata pid="13" name="Rodapé: Desbloqueio de salões" tags="footer" position="1501,902" size="100,100">(if: (history:) contains &quot;OpenStack&quot; and (passage:)&#39;s name is not &quot;Salão do OpenStack&quot;)[&lt;br/&gt;Ir para o [[Salão do OpenStack]].](if: $tccs is 5 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Desbloqueado o [[Salão dos TCCs]].](else-if: $tccs &gt;= 5 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Ir para o [[Salão dos TCCs]].]</tw-passagedata><tw-passagedata pid="14" name="Salão do OpenStack" tags="" position="1700,402" size="200,100">O TCC do [[Rafael|TCC: Rafael Turnes da Silveira]] antecede o projeto de OpenStack do IFSC câmpus São José. Na sequência, há um movimento inicial do [[projeto de nuvem|OpenStack]] com [[infraestrutura como código|IaC]], o que gerou uma [[bela história em versões|OpenStack: história em versões]]: [[v1.0|OpenStack: v1.0]], [[v1.1|OpenStack: v1.1]] e [[v1.2|OpenStack: v1.2]] (e acabou por aí).</tw-passagedata><tw-passagedata pid="15" name="IaC" tags="" position="1501,101" size="100,100">Implantar e manter operacional o OpenStack foi um marco. Associado à implantação da nuvem privada, também estava em curso o desenvolvimento de uma ideia: a automatização de ambiente. Estava claro que manter um conjunto de servidores, qualquer que fosse o tamanho com OpenStack, seria inviável de forma manual. Havia muitos arquivos e serviços com informações correlacionadas. Era, portanto, um requisito essencial do sistema para possibilitar a sua manutenção: automatizar o máximo possível. E à época uma das ferramentas mais populares era o Puppet. E como basicamente todos os arquivos eram arquivos simples, de texto, o controle de versão dessa automatização deu origem à cultura de infraestrutura como código (IaC) que (link-reveal: &quot;temos até hoje no câmpus 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc&quot;)].
+Avançar para [[SDDC]].</tw-passagedata><tw-passagedata pid="13" name="Rodapé: Desbloqueio de salões" tags="footer" position="1501,1102" size="100,100">(if: (history:) contains &quot;OpenStack&quot; and (passage:)&#39;s name is not &quot;Salão do OpenStack&quot;)[&lt;br/&gt;Ir para o [[Salão do OpenStack]].](if: $tccs is 5 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Desbloqueado o [[Salão dos TCCs]].](else-if: $tccs &gt;= 5 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Ir para o [[Salão dos TCCs]].]</tw-passagedata><tw-passagedata pid="14" name="Salão do OpenStack" tags="" position="1901.6666666666667,1000.3333333333334" size="200,100">O TCC do [[Rafael|TCC: Rafael Turnes da Silveira]] antecede o projeto de OpenStack do IFSC câmpus São José. Na sequência, há um movimento inicial do [[projeto de nuvem|OpenStack]] com [[infraestrutura como código|IaC]], o que gerou uma [[bela história em versões|OpenStack: história em versões]]: [[v1.0|OpenStack: v1.0]], [[v1.1|OpenStack: v1.1]] e [[v1.2|OpenStack: v1.2]] (e acabou por aí).</tw-passagedata><tw-passagedata pid="15" name="IaC" tags="" position="1501,101" size="100,100">Implantar e manter operacional o OpenStack foi um marco. Associado à implantação da nuvem privada, também estava em curso o desenvolvimento de uma ideia: a automatização de ambiente. Estava claro que manter um conjunto de servidores, qualquer que fosse o tamanho com OpenStack, seria inviável de forma manual. Havia muitos arquivos e serviços com informações correlacionadas. Era, portanto, um requisito essencial do sistema para possibilitar a sua manutenção: automatizar o máximo possível. E à época uma das ferramentas mais populares era o Puppet. E como basicamente todos os arquivos eram arquivos simples, de texto, o controle de versão dessa automatização deu origem à cultura de infraestrutura como código (IaC) que (link-reveal: &quot;temos até hoje no câmpus 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc&quot;)].
 
 Com a escolha do Puppet, foi possível experimentar, testar, validar, documentar o código. A ideia de um servidor central, com controle de versão de todos os arquivos, garantia os estados de pacotes, arquivos de configuração e serviços em execução, permitindo até a manutenção periódica dos sistemas (garantindo que atualizações automática dos SOs não afetassem os serviços, embora o risco fosse baixo). Porém, mais importante que essa automatização era a cultura DevOps em implantar e manter toda uma nova infraestrutura em construção. O OpenStack não era configurado: era programado.
 ---
-Avançar para [[OpenStack: história em versões]].</tw-passagedata><tw-passagedata pid="16" name="OpenStack: história em versões" tags="" position="1701,101" size="100,100">A história está no GitHub:
+Avançar para [[OpenStack: história em versões]].</tw-passagedata><tw-passagedata pid="16" name="OpenStack: história em versões" tags="" position="1699.3333333333333,196" size="100,100">A história está no GitHub:
 * Maio/2014: o mínimo para rodar uma máquina virtual sem armazenamento persistente e sem rede (Keystone, Glance, Nova).
 * Junho/2014: máquinas virtuais em rede (Neutron) e com armazenamento persistente (Cinder). Pela primeira vez, eu estava administrando a nuvem pela interface Web (Horizon) ao invés de CLI.
 * Julho/2014: serviço de objetos via Web (Ceph RADOS Gateway).
@@ -170,7 +170,7 @@ Se algo merece digno de nota, é a robustez do Ceph durante todo o processo: per
 
 As ideias de laboratório de custo baixo, enfim, estavam ganhando forma. Eu estava implantando um SDDC com sistema de arquivos e serviços distribuídos, escalável e altamente tolerante a falhas.
 ---
-Avançar para [[OpenStack: v1.0]].</tw-passagedata><tw-passagedata pid="17" name="OpenStack: v1.0" tags="" position="1901,200" size="100,100">O ano de 2015 foi de colher os frutos plantados durante as longas madrugadas depurando muitos logs de Python. A ideia, tímida porém ousada, mostrava-se mais estável em operação do que o imaginado. Estável mesmo: em janeiro desse ano, após meses sem falhas críticas, marquei a (link-reveal: &quot;versão v1.0 no repositório 🔗&quot;)[(open-url: &quot;https://github.com/boidacarapreta/openstack-ifsc/releases/tag/v1.0&quot;)].
+Avançar para [[OpenStack: v1.0]].</tw-passagedata><tw-passagedata pid="17" name="OpenStack: v1.0" tags="" position="1899.3333333333333,198.33333333333334" size="100,100">O ano de 2015 foi de colher os frutos plantados durante as longas madrugadas depurando muitos logs de Python. A ideia, tímida porém ousada, mostrava-se mais estável em operação do que o imaginado. Estável mesmo: em janeiro desse ano, após meses sem falhas críticas, marquei a (link-reveal: &quot;versão v1.0 no repositório 🔗&quot;)[(open-url: &quot;https://github.com/boidacarapreta/openstack-ifsc/releases/tag/v1.0&quot;)].
 
 E, mãe, eu apareci na TV!
 &lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/TZnOdABNgUs&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
@@ -183,7 +183,7 @@ Ou eu poderia me aquietar um pouco, voltar a viver entre os homens na Terra e ir
 
 Mas o que os monges budistas fazem quando terminam a sua mandala de areia? Eles nos ensinam a transitoriedade da vida. E era exatamente isso que eu tinha em mente.
 ---
-Avançar para [[OpenStack: v1.1]].</tw-passagedata><tw-passagedata pid="18" name="OpenStack: v1.1" tags="" position="2102,300" size="100,100">Eu comecei a (me) preparar a migração para Juno. Meu cenário: sistema operacional LTS atualizado com as correções de segurança + OpenStack LTS atualizado com as (link-reveal: &quot;correções de segurança 🔗&quot;)[(open-url: &quot;https://ubuntu.com/about/release-cycle&quot;)]. O salto para Juno era a emoção que eu não precisava. E eu não tive:
+Avançar para [[OpenStack: v1.1]].</tw-passagedata><tw-passagedata pid="18" name="OpenStack: v1.1" tags="" position="2100.3333333333335,200" size="100,100">Eu comecei a (me) preparar a migração para Juno. Meu cenário: sistema operacional LTS atualizado com as correções de segurança + OpenStack LTS atualizado com as (link-reveal: &quot;correções de segurança 🔗&quot;)[(open-url: &quot;https://ubuntu.com/about/release-cycle&quot;)]. O salto para Juno era a emoção que eu não precisava. E eu não tive:
 * Fevereiro/2015: migração para Juno.
 * Março/2015: monitoramento dos virtualizadores (Zabbix), adição de discos SSD com LVM para melhoria de desempenho:
 ** Para iniciar uma máquina virtual com Docker: 2 segundos.
@@ -196,7 +196,7 @@ Mas (sempre tem um mas) a migração de Juno para Kilo foi diferente.
 
 Todos os CHANGELOGs (o pior é que eu li todos eles) foram insuficientes para o que viria: a migração de Juno para Kilo. Entre 14 a 16 de julho de 2015, um interlúdio na minha vida: o som ininterrupto da máquina de café. 72 horas de trabalho.
 ---
-Avançar para [[OpenStack: v1.2]].</tw-passagedata><tw-passagedata pid="19" name="OpenStack: v1.2" tags="" position="2301,400" size="100,100">Mesmo com toda a automatização do Puppet, o controle de versão e o suporte mantido na versão LTS do sistema operacional, a atualização versão a versão do OpenStack se mostrou muito trabalhosa (e olha que eu gosto de café). Para quem ainda não viu, atenção aos 40 segundos:
+Avançar para [[OpenStack: v1.2]].</tw-passagedata><tw-passagedata pid="19" name="OpenStack: v1.2" tags="" position="2299.3333333333335,201.66666666666666" size="100,100">Mesmo com toda a automatização do Puppet, o controle de versão e o suporte mantido na versão LTS do sistema operacional, a atualização versão a versão do OpenStack se mostrou muito trabalhosa (e olha que eu gosto de café). Para quem ainda não viu, atenção aos 40 segundos:
 &lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/P9xM-a_GBF4?start=38&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 Além disso, o uso regular de máquinas virtuais provou que estávamos sendo muito pouco eficientes no uso dos recursos computacionais. O que os professores e alunos, os clientes da nuvem, queriam era algo muito mais simples: serviços em rede. Ou seja, um GNU/Linux com init ou systemd e vários serviços ainda demandavam um esforço considerável de configuração inicial.
@@ -206,30 +206,27 @@ E o Puppet? É preciso lembrar que esse modelo cliente-servidor podia causar fal
 O resultado? Uma história mais curta desta vez:
 * Março/2016: versão 1.2 do ambiente com Kilo.
 ---
-Avançar para [[Ponto de inflexão]].</tw-passagedata><tw-passagedata pid="20" name="Kubernetes" tags="" position="1901,902" size="100,100">O [[OpenStack]] operou por 3 anos. Os aparelhos foram desligados em dezembro de 2016, encerrando o primeiro ciclo de nuvem privada.
+Avançar para [[Ponto de inflexão]].</tw-passagedata><tw-passagedata pid="20" name="Kubernetes" tags="" position="2601,602" size="100,100">O [[OpenStack]] operou por 3 anos. Os aparelhos foram desligados em dezembro de 2016, encerrando o primeiro ciclo de nuvem privada.
 
 Houve dias com virtualização plena com KVM. GNU/Linux e Windows. Houve dias de coexistência entre KVM e contêineres via Docker. Sistemas operacionais e aplicações. Apesar de poucos utilizados durante esse período, os contêineres já sinalizavam os novos tempos para montarmos a próxima nuvem.
 
-Em 2017, assim como 2015, teve pouca produção acadêmica. O foco foi outro: migrarmos boa parte das aplicações para contêineres. E, quem sabe, agregar outras novas ao portfólio.
-
-O resultado foram vários repositórios de controle de versão:
-* (link-reveal: &quot;Documentação da infraestrutura física e lógica 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/infraestrutura&quot;)]: documentação da redundância física e lógica do cabeamento estruturado - (link-reveal: &quot;desde 2012 🔗&quot;)[(open-url: &quot;https://ifscnasnuvens.blogspot.com/&quot;)] - e protocolos da camada de enlace. (if: (history:) contains &quot;TCC: Luana Beatriz da Silva&quot;)[Mas tu já sabes que isso é [[graças a Luana|TCC: Luana Beatriz da Silva]], né?](else:)[Claro, isso não seria possível sem o [[TCC da Luana|TCC: Luana Beatriz da Silva]].]
-* Sistemas operacionais das máquinas físicas, os (link-reveal: &quot;virtualizadores 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/baremetal_cluster_coreos&quot;)]: a instalação dos virtualizadores era feita com um único arquivo de configuração por máquina, o que antigamente era feito com vários módulos do Puppet.
-* (link-reveal: &quot;Serviços em rede 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/servicos_kubernetes&quot;)]: aplicações voltadas aos usuários finais, inclusive (link-reveal: &quot;atividades de ensino 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/servicos_kubernetes/tree/2017.2/srv/ensino&quot;)].
-* (link-reveal: &quot;Imagens de contêineres 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/container_imagens&quot;)] (link-reveal: &quot;publicadas 🔗&quot;)[(open-url: &quot;https://hub.docker.com/u/cticsjeifsc/&quot;)]: personalização de imagens de contêineres para suporte a LDAP, versões específicas, entre outros.
-(link-reveal: &quot;Automatização das estações de trabalho do câmpus 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/gerenciamento_config_puppet&quot;)]: além dos servidores, as estações de trabalho são mantidas sob controle de versão.
+Em 2017, assim como 2015, teve pouca produção acadêmica. O foco foi outro: estudar como migrar as aplicações para contêineres. E, quem sabe, agregar outras novas ao portfólio.
 
 Foi com toda a certeza o ano de leitura, teste e implementação usando RESTful APIs, //webhooks// e outros da família Web. Estávamos realmente pensando longe. O [[Plano|Plano de Dominação Mundial]] estava ganhando forma.
 
 E a causa da transformação foi cultural: DevOps estava em velocidade de cruzeiro. Se (link-reveal: &quot;a TI queria migrar as estações de trabalho 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/plano_migracao_desktop_linux&quot;)] para outra distribuição Linux, o ponto de partida já era automatizar: imagens usando FOG e instalação e manutenção de arquivos e aplicativos com Puppet.
+
+Puppet? Ansible! O pessoal da TI já estava ensaiando a migração de Puppet para Ansible, dada a sua arquitetura sem servidor central, ponto único de falha, etc.
+
+Mas eu estou me adiantando. Comecemos com &quot;Era uma vez...&quot;.
 ---
-Avançar para [[Experimentações com Kubernetes]].</tw-passagedata><tw-passagedata pid="21" name="Ponto de inflexão" tags="" position="2097,600" size="100,100">Era hora de abandonar OpenStack e Ceph, operacionais desde 2014? Nathan Batista de Oliveira, com seu TCC **Aplicações em Contêineres**, e Raphael Brito Reis, com **Teste de desempenho de sistemas de arquivos distribuídos em nuvem computacional privada no IFSC câmpus São José**, me ajudaram a responder. Começou oficialmente o estudo em Kubernetes e possíveis substitutos do Ceph - estável, mas complexo. Era a vez do Gluster?
+Avançar para [[Experimentações com Kubernetes]].</tw-passagedata><tw-passagedata pid="21" name="Ponto de inflexão" tags="" position="2402,401.66666666666663" size="100,100">Era hora de abandonar OpenStack e Ceph, operacionais desde 2014? Nathan Batista de Oliveira, com seu TCC **Aplicações em Contêineres**, e Raphael Brito Reis, com **Teste de desempenho de sistemas de arquivos distribuídos em nuvem computacional privada no IFSC câmpus São José**, me ajudaram a responder. Começou oficialmente o estudo em Kubernetes e possíveis substitutos do Ceph - estável, mas complexo. Era a vez do Gluster?
 
 A ideia de contêineres abriu novas portas da percepção. A pedido da DTIC comecei a fazer experimentos com Puppet e contêineres. Algo que lembra o modelo feito lá em [[2012|Mapeamento de Serviços]].
 
 Os primeiros experimentos foram feitos seguindo os padrões que eu mesmo tinha definido para automatização de serviços. E, claro, como é de se imaginar, carregado com os antigos vícios.
 
-Comecei então a rever alguns pontos, em especial a Web como nova plataforma de serviços, e o Kubernetes se mostrou mais que adequado para isso. (link-reveal: &quot;Voltei a prancheta 🔗&quot;)[(open-url: &quot;https://github.com/boidacarapreta/wiki-ifsc/tree/kubernetes&quot;)], já com os TCCs do Nathan e do Raphael em mãos. Com esse novo caminho pela frente, surgiram CoreOS, systemd, cloud-config, flannel...
+Comecei então a rever alguns pontos, em especial a Web como nova plataforma de serviços, e o Kubernetes se mostrou mais que adequado para isso. Voltei à prancheta, já com os TCCs do Nathan e do Raphael em mãos. Com esse novo caminho pela frente, surgiram CoreOS, systemd, cloud-config, flannel...
 
 Eu estava cada vez mais focado em [[infraestrutura como código|IaC]]. Sem querer, eu estava mergulhando na cultura DevOps. E estava levando a TI junto para a toca do coelho.
 ---
@@ -239,7 +236,7 @@ As primeiras âncoras da teia já foram fixadas. É hora de começar a fazer os 
 ---
 Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="23" name="TCC: Raphael Brito Reis" tags="" position="1454,600" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]Raphael
 ---
-Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="24" name="Experimentações com Kubernetes" tags="" position="2102.6666666666665,1001" size="100,100">A flexibilidade do Kubernetes impressionou. Com o [[OpenStack]], eu podia movimentar serviços, mas isso significava:
+Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="24" name="Experimentações com Kubernetes" tags="" position="2801,597.6666666666665" size="100,100">Era uma vez o [[OpenStack]]. Eu podia movimentar os seus serviços internos, mas isso significava:
 0. Como boa prática (nem sempre eu fazia, reconheço - mentira, eu nunca fazia), criar um ramo (//branch//) no repositório do Puppet, modificar os arquivos (DNS incluso) e esperar aplicar a nova configuração.
 0. O serviço de DNS, que também estava sob controle de versão no Puppet, tinha tempos baixos de TTL. Mesmo assim, era necessário esperar esse tempo até sincronizar servidores e expirar cache(s). Durante esse período, serviços antigos e novos rodavam em paralelo.
 0. Uma vez encerrada a janela de TTL do DNS, eu podia parar os serviços antigos. Claro, outra versão no respositório do Puppet...
@@ -247,20 +244,48 @@ Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&q
 
 Sobre as máquinas virtuais, era mais fácil: apenas movimentar a máquina a quente (ligada) ou a frio (desligada) e pronto. Os discos estavam todos em rede, então a pior parte já estava resolvida. Obrigado, Ceph!
 
-Com o Kubernetes, a lógica era a mesma para os serviços de manutenção do ambiente. Mas como estamos falando de contêineres o processo era muito mais rápido e simples (mas ainda precisava esperar TTL do DNS). E não apenas isso, era mais resiliente: cada serviço visa atingir e manter um estado de operação. Sozinho, sem Puppet. E se algo der errado, encerra (&#96;SIGTERM&#96;, modo gentileza) ou mata (&#96;SIGKILL&#96;, modo Conan) a aplicação e cria outra no lugar. Sem apego.
+Mas e o Kubernetes? É melhor? Pior? Por onde começar para responder a essas perguntas? Eu pensei inicialmente, claro, em compilar tudo a mão (eu só usava *kernel* compilado em casa), *from scratch*, *the hard way*, para aprender.
 
-No começo, não havia suporte pleno a alta disponibilidade (HA) para os componentes mestre. Então, era matar e criar outro processo. E esperar convergir com os outros serviços.
+- Não! nada disso: a ideia era justamente fugir do considerável trabalho de manter a infraestrutura rodando(click-replace: &quot;rodando&quot;)[rodando. //Up and running, simple as that//].
 
-E sobre as aplicações de usuário, ao invés de movimentar os serviços, a mesma lógica: encerra (ou mata) a aplicação e cria outra. Pronto. Deixa o agendador (*scheduler*) do Kubernetes se preocupar com os recursos de *hardware*.
+- Ok. E um pacote pronto? Com OpenStack eu usei a documentação oficial sobre Ubuntu, e tinha dado certo: estudar e implantar **ao mesmo tempo**.
 
-E assim começou a experiência de Kubernetes usando CoreOS.
+- Certo: será um pacote pronto, com boa documentação e base com bom ciclo de evolução.
+
+E agora? Depois de uns dois meses pesquisando, encontrei o CoreOS, proeminente e com boa visão: kernel, systemd e cloud-config.
+
+Systemd? Cloud-config? Assim começou a experiência de Kubernetes usando CoreOS.
 ---
 Avançar para [[Kubernetes sobre CoreOS]].</tw-passagedata><tw-passagedata pid="25" name="Cabeçalho: jornada do leitor" tags="header" position="102,400" size="100,100">(if: (history:)&#39;s length &gt;= 1)[|chamada&gt;[(link:&quot;[Jornada do leitor] → &quot;)[(show:?jornada)]]|jornada)[(for: each _passagem, ...(history:))[[[_passagem]] → ]]](else:)[Início da Jornada → ](print: (passage:)&#39;s name)
 ---
-</tw-passagedata><tw-passagedata pid="26" name="Kubernetes sobre CoreOS" tags="" position="2299.333333333333,1102.6666666666667" size="100,100">CoreOS
-systemd
-cloud-config
-flannel</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="26" name="Kubernetes sobre CoreOS" tags="" position="2999.333333333333,601.0000000000002" size="100,100">Ouroboros. O ciclo se repete: um sistema base com instalação automatizada, sendo montada em pequenos blocos graduais. Sai o Ubuntu (sysvinit + upstart) com Puppet e OpenStack, entra CoreOS (systemd) com cloud-config e Kubernetes.
+
+Lá e de volta outra vez.
+
+Eu achava que sabia linux. Usava vi (vim também), sed, awk, e o Emacs já foi minha IDE preferida nos anos 2K, o que precisava mais? Ah, sim, o systemd. Saíamos no sincretismo politeísta para o monoteísmo. O alfa e o ômega. O &#96;service&#96; e o &#96;target&#96;. Para muitos, o systemd era praticamente uma heresia.
+
+Porém, admito que o CoreOS com systemd e Docker era um projeto elegante e estável. Sua lógica de atualização por chaveamento de partição, baseada no ChromeOS, chamou a minha atenção - a ponto de adotar o ChromeOS como meu atual sistema operacional de trabalho (estou em 2019).
+
+Depois de entender (o suficiente de) systemd, fui estudar sobre redes virtuais. Novamente, no caso: já tinha trabalhado com GRE e Open vSwitch no OpenStack, e agora a bola da vez era VXLAN, implementada pelo flannel - família CoreOS.
+
+Por fim, quando sabia o que estava acontecendo, pude experimentar o cloud-config para automatização de instalação. E o (link-reveal: &quot;resultado 🔗&quot;)[(open-url: &quot;https://github.com/boidacarapreta/wiki-ifsc/tree/kubernetes&quot;)], diga-se de passagem, ficou muito bom.
+
+Acabou a brincadeira. A TI entrou em campo, e a coisa ficou séria. Fizemos em conjunto vários, vários *clusters*. Começamos com o mesmo (link-reveal: &quot;CoreOS 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/baremetal_cluster_coreos&quot;)], depois (link-reveal: &quot;tentamos Tectonic 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/instalacao_tectonic_bare_metal&quot;)], a versão comercial do CoreOS. MatchBox. PXE. TFTP. DNSmasq. Tá bom, né? #partiuRancher
+---
+Avançar para [[Kubernetes sobre Rancher]] .</tw-passagedata><tw-passagedata pid="27" name="Kubernetes sobre Rancher" tags="" position="3201.666666666667,599.3333333333335" size="100,100">2018. PAREI AQUI!
+
+https://github.com/ctic-sje-ifsc/baremetal_rke_kubernetes
+
+Sem Ceph, e Gluster fora, fica NFS com FreeNAS:
+https://github.com/ctic-sje-ifsc/storage
+
+
+[[Serviços sobre Kubernetes]] </tw-passagedata><tw-passagedata pid="28" name="Serviços sobre Kubernetes" tags="" position="3403.333333333334,600.8333333333335" size="100,100">[[Kubernetes como plataforma]] </tw-passagedata><tw-passagedata pid="29" name="Kubernetes como plataforma" tags="" position="3603.3333333333335,599.1666666666667" size="100,100">O resultado foram vários repositórios de controle de versão:
+* (link-reveal: &quot;Documentação da infraestrutura física e lógica 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/infraestrutura&quot;)]: documentação da redundância física e lógica do cabeamento estruturado - (link-reveal: &quot;desde 2012 🔗&quot;)[(open-url: &quot;https://ifscnasnuvens.blogspot.com/&quot;)] - e protocolos da camada de enlace. (if: (history:) contains &quot;TCC: Luana Beatriz da Silva&quot;)[Mas tu já sabes que isso é [[graças a Luana|TCC: Luana Beatriz da Silva]], né?](else:)[Claro, isso não seria possível sem o [[TCC da Luana|TCC: Luana Beatriz da Silva]].]
+* Sistemas operacionais das máquinas físicas, os (link-reveal: &quot;virtualizadores 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/baremetal_cluster_coreos&quot;)]: a instalação dos virtualizadores era feita com um único arquivo de configuração por máquina, o que antigamente era feito com vários módulos do Puppet.
+* (link-reveal: &quot;Serviços em rede 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/servicos_kubernetes&quot;)]: aplicações voltadas aos usuários finais, inclusive (link-reveal: &quot;atividades de ensino 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/servicos_kubernetes/tree/2017.2/srv/ensino&quot;)].
+* (link-reveal: &quot;Imagens de contêineres 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/container_imagens&quot;)] (link-reveal: &quot;publicadas 🔗&quot;)[(open-url: &quot;https://hub.docker.com/u/cticsjeifsc/&quot;)]: personalização de imagens de contêineres para suporte a LDAP, versões específicas, entre outros.
+Automatização das estações de trabalho do câmpus: além dos servidores, as estações de trabalho são mantidas sob controle de versão. Originalmente com (link-reveal: &quot;Puppet 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/gerenciamento_config_puppet&quot;)], agora tudo é feito com (link-reveal: &quot;Ansible 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/ansible&quot;)].</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
