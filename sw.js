@@ -1,12 +1,12 @@
 const cacheName = "cache-v1";
 const precacheResources = [
-  "/",
-  "index.html",
-  "logo-128.png",
-  "logo-192.png",
-  "logo-256.png",
-  "logo-384.png",
-  "logo-512.png"
+  "./",
+  "./index.html",
+  "./logo-128.png",
+  "./logo-192.png",
+  "./logo-256.png",
+  "./logo-384.png",
+  "./logo-512.png"
 ];
 
 self.addEventListener("install", event => {
