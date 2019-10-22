@@ -288,7 +288,7 @@ Depois de uns dois meses pesquisando, encontrei o CoreOS, proeminente e com boa 
 
 Systemd? Cloud-config? Assim começou a experiência de Kubernetes usando CoreOS.
 ---
-Avançar para [[Kubernetes sobre CoreOS]].</tw-passagedata><tw-passagedata pid="25" name="Cabeçalho: jornada do leitor" tags="header" position="102,400" size="100,100">(if: (history: )&#39;s length &lt; 1)[(if: (saved-games:) contains &quot;Slot A&quot;)[(load-game: &quot;Slot A&quot;)]](else:)[(save-game: &quot;Slot A&quot;)](if: (history:)&#39;s length &gt;= 1)[|chamada&gt;[(link:&quot;[Jornada do leitor] → &quot;)[(show:?jornada)]]|jornada)[(for: each _passagem, ...(history:))[[[_passagem]] → ]]](else:)[Início da Jornada → ](print: (passage:)&#39;s name)
+Avançar para [[Kubernetes sobre CoreOS]].</tw-passagedata><tw-passagedata pid="25" name="Cabeçalho: jornada do leitor" tags="header" position="102,400" size="100,100">(if: (history: )&#39;s length &lt; 1)[(if: (saved-games:) contains &quot;Slot A&quot;)[(load-game: &quot;Slot A&quot;)](else:)[Início da Jornada → ]](else:)[(save-game: &quot;Slot A&quot;)|chamada&gt;[(link:&quot;[Jornada do leitor] → &quot;)[(show:?jornada)]]|jornada)[(for: each _passagem, ...(history:))[[[_passagem]] → ]]](print: (passage:)&#39;s name)
 ---
 </tw-passagedata><tw-passagedata pid="26" name="Kubernetes sobre CoreOS" tags="" position="2999,601" size="100,100">Ouroboros. O ciclo se repete: um sistema base com instalação automatizada,  montado aos poucos, em pequenos blocos graduais. Sai o Ubuntu (sysvinit + upstart) com Puppet e OpenStack, entra CoreOS (systemd) com cloud-config e Kubernetes.
 
