@@ -8,21 +8,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="application-name" content="Plano de Dominação Mundial" />
-<meta
-  name="apple-mobile-web-app-title"
-  content="Plano de Dominação Mundial"
-/>
+<meta name="apple-mobile-web-app-title" content="Plano de Dominação Mundial" />
 <meta name="theme-color" content="#404040" />
 <meta name="msapplication-navbutton-color" content="#404040" />
-<meta
-  name="apple-mobile-web-app-status-bar-style"
-  content="black-translucent"
-/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="msapplication-starturl" content="./index.html" />
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, shrink-to-fit=no"
-/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link rel="icon" sizes="128x128" href="./logo-128.png" />
 <link rel="apple-touch-icon" sizes="128x128" href="./logo-128.png" />
 <link rel="icon" sizes="192x192" href="./logo-192.png" />
@@ -38,16 +29,7 @@
 </head>
 
 <body>
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("sw.js")
-      .then(reg => console.info("Service worker registered: ", reg))
-      .catch(err =>
-        console.error("Error registering service worker: ", err)
-      );
-  }
-</script>
+
 <tw-story></tw-story>
 
 <tw-storydata name="Plano de Dominação Mundial" startnode="7" creator="Twine" creator-version="2.3.5" ifid="CA058C3A-902E-408E-BB25-76B8436C0862" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.video-container {
@@ -83,7 +65,14 @@ tw-enchantment.link:hover, tw-link:hover, tw-link.visited:hover {
 	color: #A68051;
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">if ("serviceWorker" in navigator) {
+	navigator.serviceWorker
+		.register("sw.js")
+    .then(reg => console.info("Service worker registered: ", reg))
+    .catch(err =>
+    	console.error("Error registering service worker: ", err)
+		);
+}
 
 
 
