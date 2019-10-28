@@ -32,20 +32,8 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Plano de Dominação Mundial" startnode="7" creator="Twine" creator-version="2.3.5" ifid="CA058C3A-902E-408E-BB25-76B8436C0862" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.video-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px; height: 0; overflow: hidden;
-}
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+<tw-storydata name="Plano de Dominação Mundial" startnode="7" creator="Twine" creator-version="2.3.5" ifid="CA058C3A-902E-408E-BB25-76B8436C0862" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+	display: none;
 }
 
 tw-story[tags~="atenção"] {
@@ -65,7 +53,21 @@ tw-enchantment.link:hover, tw-link:hover, tw-link.visited:hover {
 	color: #A68051;
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">if ("serviceWorker" in navigator) {
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">if ("serviceWorker" in navigator) {
 	navigator.serviceWorker
 		.register("sw.js")
     .then(reg => console.info("Service worker registered: ", reg))
