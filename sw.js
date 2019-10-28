@@ -1,8 +1,7 @@
-const version = "0.1.4";
+const version = "0.1.5";
 const cacheName = "boidacarapreta-pdm"
 const precacheResources = [
   "./",
-  "./index.html",
   "./logo-128.png",
   "./logo-192.png",
   "./logo-256.png",
