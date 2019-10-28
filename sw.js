@@ -1,5 +1,5 @@
-const version = "0.1.2";
-const cacheName = "cache-" + version;
+const version = "0.1.3";
+const cacheName = "boidacarapreta-pdm"
 const precacheResources = [
   "./",
   "./index.html",
