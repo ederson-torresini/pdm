@@ -85,7 +85,7 @@ if ("serviceWorker" in navigator) {
     .catch(err =>
     	console.error("Error registering service worker: ", err)
 		);
-}</script><tw-tag name="salão" color="red"></tw-tag>,<tw-tag name="tcc" color="blue"></tw-tag>,<tw-tag name="footer" color="purple"></tw-tag>,<tw-tag name="header" color="purple"></tw-tag><tw-passagedata pid="1" name="SDDC" tags="" position="901,101" size="100,100">No ano de 2013 já era comum falarmos de infraestrutura redundante e serviços agregados. Nas camadas inferiores, era o trio VLAN, STP e agregação de enlace com LACP que foram escolhidos para oferecer disponibilidade, redundância e desempenho em rede que já falávamos. O trabalho do Alexandre projetava o mesmo para a camada de aplicação: redundância e distribuição de carga. Todas as aplicações rodavam em (no mínimo) pares, começando por DNS, a balancear a carga para os serviços //front-end// HTTP, a fazer outra distribuição para os serviços //back-end// HTTP.
+}</script><tw-tag name="salão" color="green"></tw-tag>,<tw-tag name="tcc" color="blue"></tw-tag>,<tw-tag name="footer" color="purple"></tw-tag>,<tw-tag name="header" color="purple"></tw-tag>,<tw-tag name="melhorar" color="red"></tw-tag><tw-passagedata pid="1" name="SDDC" tags="" position="901,101" size="100,100">No ano de 2013 já era comum falarmos de infraestrutura redundante e serviços agregados. Nas camadas inferiores, era o trio VLAN, STP e agregação de enlace com LACP que foram escolhidos para oferecer disponibilidade, redundância e desempenho em rede que já falávamos. O trabalho do Alexandre projetava o mesmo para a camada de aplicação: redundância e distribuição de carga. Todas as aplicações rodavam em (no mínimo) pares, começando por DNS, a balancear a carga para os serviços //front-end// HTTP, a fazer outra distribuição para os serviços //back-end// HTTP.
 
 Até pensamos em fazer tradução de vários protocolos para HTTP, como por exemplo FTP e XMPP, mas desistimos pelo esforço necessário: melhor investir em novas aplicações que traduzir as antigas. Ao invés de //gateways// para o legado, novas soluções.
 
@@ -131,9 +131,9 @@ Luana pegou os parcos mapas amarelados de cabeamento estruturado do câmpus, com
 
 Com o trabalho da Luana encerrado, foi possível discutir caminhos físicos alternativos e redundantes, hierarquia de *switches* gerenciáveis, redes virtuais de fato. Em resumo: nesse momento havia lastro para avançar às camadas seguintes e falar sobre os protocolos de Enlace e de Rede.
 ---
-Avançar para [[Protocolos da camada de Enlace]].
-Pular a camada de Enlace e partir para [[Protocolos da camada de Rede]].
-Ignorar as camadas de Enlace e de Rede e partir direto para o [[Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="6" name="Mapeamento de Serviços" tags="" position="700,100" size="100,100">Em 2012 tivemos o recomeço do calendário maia. Era um sinal de grandes mudanças.
+Avançar para [[Protocolos da Camada de Enlace]].
+Pular a camada de enlace e partir para [[Protocolos da Camada de Rede]].
+Ignorar as camadas de enlace e de rede e partir direto para o [[Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="6" name="Mapeamento de Serviços" tags="" position="700,100" size="100,100">Em 2012 tivemos o recomeço do calendário maia. Era um sinal de grandes mudanças.
 
 Em São José, havia alguns servidores de rack com VMWare ESXi. O VMFS cuidava dos discos locais, o backup era feito por fitas LTO, e as máquinas virtuais eram criadas por demanda. Foi um progresso artesanal, cadenciado, mas que poderia ser melhorado com a consolidação dos serviços, sem qualquer intervenção manual na infraestrutura física. Era um pequeno passo, mas necessário. E Alexandre Marquez Filho, neste mesmo ano de 2012, defendeu o TCC intitulado **Infraestrutura Orientada a SaaS**. A proposta: analisar os serviços oferecidos nas doze máquinas virtuais e propor disponibilidade, redundância e desempenho reorganizando-os.
 
@@ -162,7 +162,7 @@ Para encurtar esta história, vou me basear apenas nos três pilares que se torn
 Era preciso ampliar os horizontes. Pensar fora da caixa. Mais especificamente, no //software//.
 ---
 A partir deste ponto, a história se bifurca em dois caminhos diferentes. O primeiro segue uma abordagem em camadas, tratando primeiro do [[Cabeamento Estruturado]] (e seus desdobramentos) do câmpus São José.
-O segundo caminho ignora tudo sobre camadas Física e Enlace e vai direto para [[mapeamento de serviços em rede|Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="10" name="TCC: Rafael Turnes da Silveira" tags="tcc" position="1052,551.3333333333334" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]//São José, 2014. Tarde da noite. No laboratório de experimentos do Professor, Turnes tenta uma cartada final para dissuadi-lo do plano de dominação:
+O segundo caminho ignora tudo sobre camadas física e enlace e vai direto para [[mapeamento de serviços em rede|Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="10" name="TCC: Rafael Turnes da Silveira" tags="tcc" position="1052,551.3333333333334" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]//São José, 2014. Tarde da noite. No laboratório de experimentos do Professor, Turnes tenta uma cartada final para dissuadi-lo do plano de dominação:
 - &quot;Professor, acredita em mim, se construir eles virão.&quot;
 - &quot;Não desta vez, Turnes. Eles são lisos como enguias. Precisamos ter certeza de que dará certo.&quot;
 - &quot;Mas como fazer isso? Não podemos apenas conversar civilizadamente?!&quot;
@@ -183,13 +183,17 @@ Foi a primeira nuvem privada, em caráter experimental, de São José. Na verdad
 
 Com esse recurso foi possível desenvolver, boa parte a distância, uma proposta real e tangível a ser apreciada por todos os envolvidos.
 ---
-Avançar para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="salão" position="1000,998" size="200,100">Sobre cabeamento estruturado, tem o trabalho da [[Luana|TCC: Luana Beatriz da Silva]].
+Avançar para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="salão melhorar" position="1000,998" size="200,100">Sobre cabeamento estruturado, tem o trabalho da [[Luana|TCC: Luana Beatriz da Silva]].
 
 Em relação a mapeamento de serviços, o [[Alexandre|TCC: Alexandre Marquez Filho]] fez um trabalho de revisão.
 
 Sobre SDDC, o [[Rafael|TCC: Rafael Turnes da Silveira]] estudou SDDC e SDN.
 
-Quanto a pesquisa em contêineres, o [[Nathan|TCC: Nathan Batista de Oliveira]] estudou o Kubernetes. De forma complementar o [[Raphael|TCC: Raphael Brito Reis]] pesquisou sistemas de arquivos distribuídos para a nova plataforma.</tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="tcc" position="848,551" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]O que se percebeu , ao analisar as máquinas virtuais e seus serviços, foi  uma lista de vários servidores, em especial HTTP, que poderiam ser agregados em apenas um. Feito o mapeamento de serviços, foram estabelecidas as relações e dependências (acredita, dá trabalho). Por fim, foi proposto um modelo com uma visão sistêmica sobre o todo: máquinas virtuais redundantes para oferecerem serviços equivalentes. Os serviços, inclusive, foram organizados em três categorias:
+Quanto a pesquisa em contêineres, o [[Nathan|TCC: Nathan Batista de Oliveira]] estudou o Kubernetes. De forma complementar o [[Raphael|TCC: Raphael Brito Reis]] pesquisou sistemas de arquivos distribuídos para a nova plataforma.
+
+Com o Kubernetes no ar, passamos a nos interessar em como prover armazenamento persistente, com a ajuda do [[Matuzalém|TCC: Matuzalém Müller dos Santos]], e da qualidade de alguns serviços críticos, como Matlab, trabalho da [[Maria Luiza|TCC: Maria Luiza Theisges]].
+
+TCC de gerenciamento de projetos do [[Natan|TCC: Natan Martins Jory]].</tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="tcc melhorar" position="848,551" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]O que se percebeu , ao analisar as máquinas virtuais e seus serviços, foi  uma lista de vários servidores, em especial HTTP, que poderiam ser agregados em apenas um. Feito o mapeamento de serviços, foram estabelecidas as relações e dependências (acredita, dá trabalho). Por fim, foi proposto um modelo com uma visão sistêmica sobre o todo: máquinas virtuais redundantes para oferecerem serviços equivalentes. Os serviços, inclusive, foram organizados em três categorias:
 * Gerência: de uso exclusivo da TI, como por exemplo SSH e SNMP.
 * Rede local: de alcance reduzido na rede, servem para fornecer aos clientes recursos de rede, como por exemplo DHCP, DNS, LDAP e NTP.
 * Internet: os serviços voltados aos usuários finais. Estes, por sua vez, estavam subdivididos em:
@@ -213,7 +217,7 @@ Melhor um vídeo para explicar?
 
 Durante o segundo semestre de 2015, foram feitos muitos testes com LBaaS, orquestração e autoescalonamento. Por questão de tempo, ficaram fora dos testes o DVR (//distributed virtual router//), Designate (DNS), Magnum (CaaS), Murano (catálogo de aplicações) e Manila (sistemas de arquivos compartilhado). Eu ainda não sabia que eles jamais veriam a luz do dia.
 
-Se algo merece digno de nota, é a robustez do Ceph durante todo o processo: perdi discos, houve quedas de energia. No caso de queda de energia, era necessário apenas o Puppet certificar-se de que o Ceph estava no ar. E voltar ao trabalho. Obrigado, Ceph!
+Se algo merece digno de nota, é a robustez do Ceph durante todo o processo: perdi discos, formatei disco errado, houve quedas de energia. No caso de queda de energia, era necessário apenas o Puppet certificar-se de que o Ceph estava no ar. E voltar ao trabalho. Obrigado, Ceph!
 
 As ideias de laboratório de custo baixo, enfim, estavam ganhando forma. Eu estava implantando um SDDC com sistema de arquivos e serviços distribuídos, escalável e altamente tolerante a falhas.
 ---
@@ -241,7 +245,7 @@ Avançar para [[OpenStack: v1.1]].</tw-passagedata><tw-passagedata pid="18" name
 Mas (sempre tem um mas) a migração de Juno para Kilo foi diferente.
 &lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/P9xM-a_GBF4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-Todos os CHANGELOGs (o pior é que eu li todos eles) foram insuficientes para o que viria: a migração de Juno para Kilo. Entre 14 a 16 de julho de 2015, um interlúdio na minha vida: o som ininterrupto da máquina de café. 72 horas de trabalho.
+Todos os CHANGELOGs (o pior é que eu li todos eles) foram insuficientes para o que viria: a migração de Juno para Kilo. Entre 14 a 16 de julho de 2015, um interlúdio na minha vida: o ronco ininterrupto da máquina de café. 72 horas de trabalho.
 ---
 Avançar para [[OpenStack: v1.2]].</tw-passagedata><tw-passagedata pid="19" name="OpenStack: v1.2" tags="" position="2299,201" size="100,100">Mesmo com toda a automatização do Puppet, o controle de versão e o suporte mantido na versão LTS do sistema operacional, a atualização versão a versão do OpenStack se mostrou muito trabalhosa (e olha que eu gosto de café). Para quem ainda não viu, atenção aos 40 segundos:
 &lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/P9xM-a_GBF4?start=38&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
@@ -257,7 +261,7 @@ Avançar para [[Ponto de inflexão]].</tw-passagedata><tw-passagedata pid="20" n
 
 Houve dias com virtualização plena com KVM. GNU/Linux e Windows. Houve dias de coexistência entre KVM e contêineres via Docker. Sistemas operacionais e aplicações. Apesar de poucos utilizados durante esse período, os contêineres já sinalizavam os novos tempos para montarmos a próxima nuvem.
 
-Em 2017, assim como 2015, teve pouca produção acadêmica. O foco foi outro: estudar como migrar as aplicações para contêineres. E, quem sabe, agregar outras novas ao portfólio.
+Em 2017, assim como 2015, houve pouca produção acadêmica. O foco foi outro: estudar como migrar as aplicações para contêineres. E, quem sabe, agregar outras novas ao portfólio.
 
 Foi com toda a certeza o ano de leitura, teste e implementação usando RESTful APIs, //webhooks// e outros da família Web. Estávamos realmente pensando longe. O [[Plano|Plano de Dominação Mundial]] estava ganhando forma.
 
@@ -279,9 +283,9 @@ Eu estava cada vez mais focado em [[infraestrutura como código|OpenStack e IaC]
 ---
 Ler sobre o [[TCC do Nathan|TCC: Nathan Batista de Oliveira]].
 Ler sobre o [[TCC do Raphael|TCC: Raphael Brito Reis]].
-As primeiras âncoras da teia já foram fixadas. É hora de começar a fazer os primeiros anéis centrais... Para avançar com o livro, será preciso revisitar passagens que fazem relação com a próxima plataforma, (if: (history:) contains &quot;Kubernetes&quot;)[o [[Kubernetes]]](else:)[Kubernetes]. Até porque eu já mexia com [[contêineres|OpenStack: história em versões]], não é mesmo?</tw-passagedata><tw-passagedata pid="22" name="TCC: Nathan Batista de Oliveira" tags="tcc" position="1450,551" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]Nathan
+As primeiras âncoras da teia já foram fixadas. É hora de começar a fazer os primeiros anéis centrais... Para avançar com o livro, será preciso revisitar passagens que fazem relação com a próxima plataforma, (if: (history:) contains &quot;Kubernetes&quot;)[o [[Kubernetes]]](else:)[Kubernetes]. Até porque eu já mexia com [[contêineres|OpenStack: história em versões]], não é mesmo?</tw-passagedata><tw-passagedata pid="22" name="TCC: Nathan Batista de Oliveira" tags="tcc melhorar" position="1450,551" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]Nathan
 ---
-Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="23" name="TCC: Raphael Brito Reis" tags="tcc" position="1251.6666666666665,552.6666666666666" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]Raphael
+Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="23" name="TCC: Raphael Brito Reis" tags="tcc melhorar" position="1251.6666666666665,552.6666666666666" size="100,100">(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]Raphael
 ---
 Avançar para [[Ponto de inflexão]].(if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="24" name="Experimentações com Kubernetes" tags="" position="2501,802" size="100,100">Era uma vez o [[OpenStack]]. Eu podia movimentar os seus serviços internos, administrativos, mas isso significava:
 0. Como boa prática (nem sempre eu fazia, reconheço - mentira, eu nunca fazia), criar um ramo (//branch//) no repositório do Puppet, modificar os arquivos (DNS incluso) e esperar aplicar a nova configuração.
@@ -319,7 +323,7 @@ A partir daí, acabou a brincadeira. A TI entrou em campo, e a coisa ficou séri
 
 Nessa época, era grande a efervescência pelo assunto, e muitas soluções surgiram no horizonte. Uma delas, o Rancher.
 ---
-Avançar para [[Kubernetes sobre Rancher]] .</tw-passagedata><tw-passagedata pid="27" name="Kubernetes sobre Rancher" tags="" position="2499.333333333333,1202.3333333333335" size="100,100">Ouroboros. O Rancher destacou-se na multidão pelo seu (à época pequeno) ecossistema em desenvolvimento:
+Avançar para [[Kubernetes sobre Rancher]].</tw-passagedata><tw-passagedata pid="27" name="Kubernetes sobre Rancher" tags="" position="2499.333333333333,1202.3333333333335" size="100,100">Ouroboros. O Rancher destacou-se na multidão pelo seu (à época pequeno) ecossistema em desenvolvimento:
 0. Um sistema operacional mínimo, o RancherOS;
 0. Um instalador de Kubernetes, o RKE;
 0. Uma interface Web (com API própria).
@@ -330,19 +334,29 @@ No começo, havia o Ubuntu versão servidor, que precisava de atualização, man
 
 Então, no começo de 2018 saiu do forno o mais novo (link-reveal: &quot;*cluster* de produção 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/baremetal_rke_kubernetes&quot;)], agora com RancherOS, RKE e Rancher API.
 
-O Ceph foi desativado. Um servidor NAS, (link-reveal: &quot;feito com FreeNAS 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/storage&quot;)], foi colocado temporariamente(click-replace: &quot;temporariamente&quot;)[quase em definitivo]. Sem Ceph. Sem Gluster. O objetivo era claro: com tantas mudanças na infraestrutura, precisávamos de tempo para focar nos serviços voltados aos usuários finais.
+O Ceph foi desativado. Um servidor NFS, (link-reveal: &quot;feito com FreeNAS 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/storage&quot;)], foi colocado temporariamente(click-replace: &quot;temporariamente&quot;)[quase em definitivo]. Sem Ceph. Sem Gluster. O objetivo era claro: com tantas mudanças na infraestrutura, precisávamos de tempo para focar nos serviços voltados aos usuários finais.
 ---
-Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="28" name="Serviços sobre Kubernetes" tags="" position="2501.333333333333,1401.6666666666667" size="100,100">
-[[Kubernetes como plataforma]] </tw-passagedata><tw-passagedata pid="29" name="Kubernetes como plataforma" tags="" position="2499.6666666666665,1602.3333333333335" size="100,100">Desde o [[ponto de inflexão|Ponto de inflexão]], o que mais se destacou na cultura DevOps da TI foi, na minha opinião, a documentação de todo o sistema em vários repositórios de controle de versão:
+Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="28" name="Serviços sobre Kubernetes" tags="" position="2501.333333333333,1362.3333333333335" size="100,100">As camadas [[física|Cabeamento Estruturado]], [[enlace|Protocolos da Camada de Enlace]] e [[de rede|Protocolos da Camada de Rede]] operavam em velocidade de cruzeiro há tempos. O [[Rancher|Kubernetes sobre Rancher]], de uma forma geral, resolvia a segunda parte do problema.
+
+O ano de 2018 foi então dedicado aos serviços sobre Kubernetes. E muita luta no *front* acadêmico. Os TCCs - como os da Maria Luiza Theisges e do Matuzalém Müller dos Santos - passaram a focar nos serviços oferecidos em cima da nuvem, abstraindo praticamente tudo desde a camada física até a camada de aplicação, entregando apenas uma API para publicar aplicações e serviços. O resultado? Conseguimos migrar quase todas as aplicações. Assim, Kubernetes virou a nossa plataforma de desenvolvimento ágil. A ideia ficou tão boa que o Gabriel de Souza pensou em expandi-la para todo o IFSC: uma nuvem multicluster. [[Lembra?|Plano de Dominação Mundial]] 
+---
+Ler sobre o [[TCC da Maria Luiza|TCC: Maria Luiza Theisges]].
+Ler sobre o [[TCC do Matuzalém|TCC: Matuzalém Müller dos Santos]].
+Ler sobre o [[TCC do Gabriel|TCC: Gabriel de Souza]].
+Avançar para [[Kubernetes como Plataforma]].</tw-passagedata><tw-passagedata pid="29" name="Kubernetes como Plataforma" tags="" position="2499.6666666666665,1602.3333333333335" size="100,100">Desde o [[ponto de inflexão|Ponto de inflexão]], o que mais se destacou na cultura DevOps da TI foi, na minha opinião, a documentação de todo o sistema em vários repositórios de controle de versão:
 * (link-reveal: &quot;Documentação da infraestrutura física e lógica 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/infraestrutura&quot;)]: documentação da redundância física e lógica do cabeamento estruturado - (link-reveal: &quot;desde 2012 🔗&quot;)[(open-url: &quot;https://ifscnasnuvens.blogspot.com/&quot;)] - e protocolos da camada de enlace. (if: (history:) contains &quot;TCC: Luana Beatriz da Silva&quot;)[Mas tu já sabes que isso é [[graças a Luana|TCC: Luana Beatriz da Silva]], né?](else:)[Claro, isso não seria possível sem o [[TCC da Luana|TCC: Luana Beatriz da Silva]].]
 * Sistemas operacionais das máquinas físicas: os (link-reveal: &quot;virtualizadores 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/baremetal_rke_kubernetes&quot;)].
 * (link-reveal: &quot;Imagens de contêineres 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/container_imagens&quot;)] (link-reveal: &quot;publicadas 🔗&quot;)[(open-url: &quot;https://hub.docker.com/u/cticsjeifsc/&quot;)]: personalização de imagens de contêineres para suporte a LDAP, versões específicas, entre outros.
 * (link-reveal: &quot;Serviços em rede 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/servicos_kubernetes&quot;)]: aplicações voltadas aos usuários finais, inclusive (link-reveal: &quot;atividades de ensino 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/servicos_kubernetes/tree/2017.2/srv/ensino&quot;)].
-* Automatização das estações de trabalho do câmpus: além dos servidores, as estações de trabalho são mantidas sob controle de versão. Originalmente com (link-reveal: &quot;Puppet 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/gerenciamento_config_puppet&quot;)], agora tudo é feito com (link-reveal: &quot;Ansible 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/ansible&quot;)].
+* Automatização das estações de trabalho do câmpus: além dos servidores, as estações de trabalho são mantidas sob gerenciamento de configuração com controle de versão. Primeiro  (link-reveal: &quot;Puppet 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/gerenciamento_config_puppet&quot;)], agora (link-reveal: &quot;Ansible 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/ansible&quot;)].
 
-A (link-reveal: &quot;literatura técnica 🔗&quot;)[(open-url: &quot;https://thenewstack.io/ebooks/&quot;)] no assunto também ajudou muito.</tw-passagedata><tw-passagedata pid="30" name="Salão do Kubernetes" tags="salão" position="2001.6666666666667,1002.3333333333334" size="200,100">Não havia dúvidas que [[Kubernetes]] atenderia melhor a nossa demanda, mas manter essa infraestrutura seria melhor?  [[Experimentações com Kubernetes]] foram feitas usando [[CoreOS|Kubernetes sobre CoreOS]]. Depois, entramos em produção com o [[Rancher|Kubernetes sobre Rancher]].
+Era hora de mostrar ao mundo!
+---
+Avançar para [[Kubernetes para Todos]].</tw-passagedata><tw-passagedata pid="30" name="Salão do Kubernetes" tags="salão" position="2001.6666666666667,1002.3333333333334" size="200,100">Não havia dúvidas que [[Kubernetes]] atenderia melhor a nossa demanda, mas e **manter essa infraestrutura**?  [[Experimentações com Kubernetes]] foram feitas usando [[CoreOS|Kubernetes sobre CoreOS]]. Depois, entramos em produção com o [[Rancher|Kubernetes sobre Rancher]].
 
-O resultado? Conseguimos [[migrar quase todas as aplicações|Serviços sobre Kubernetes]]. Hoje, Kubernetes é mais que isso: é a nossa [[plataforma de desenvolvimento ágil|Kubernetes como plataforma]].</tw-passagedata><tw-passagedata pid="31" name="Protocolos da camada de Enlace" tags="" position="700,301.33333333333337" size="100,100">VLAN
+Sim, entrar em produção significa funcionar **muito bem, obrigado**. Dormimos melhor. Almoçamos no horário(click-replace: &quot;Almoçamos no horário&quot;)[Quase almoçamos no horário, mas a culpa não é da nuvem].
+
+Os [[serviços|Serviços sobre Kubernetes]] passaram a ser o foco do nosso trabalho, até a nuvem se tornar a [[plataforma|Kubernetes como Plataforma]] de trabalho da TI. Os TCCs da [[Maria Luiza|TCC: Maria Luiza Theisges]], do [[Matuzalém|TCC: Matuzalém Müller dos Santos]] e do [[Gabriel|TCC: Gabriel de Souza]] foram essenciais para avaliar e validar o nosso modelo original e oferecer [[Kubernetes para ensino, pesquisa e extensão|Kubernetes para Todos]].</tw-passagedata><tw-passagedata pid="31" name="Protocolos da Camada de Enlace" tags="melhorar" position="700,301.33333333333337" size="100,100">VLAN
 
 STP
 
@@ -352,10 +366,36 @@ link aggregation
 Com as camadas inferiores
 
 ---
-Avançar para [[Protocolos da camada de Rede]].
-Pular os protocolos e ir direto para [[Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="32" name="Protocolos da camada de Rede" tags="" position="901.6666666666667,299.6666666666667" size="100,100">IPv4 e IPv6
+Avançar para [[Protocolos da Camada de Rede]].
+Pular os protocolos e ir direto para [[Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="32" name="Protocolos da Camada de Rede" tags="melhorar" position="901.6666666666667,299.6666666666667" size="100,100">IPv4 e IPv6
 ---
-Avançar para [[Mapeamento de Serviços]].</tw-passagedata></tw-storydata>
+Avançar para [[Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="33" name="TCC: Matuzalém Müller dos Santos" tags="tcc melhorar" position="2046.6666666666667,557.4999999999999" size="100,100">https://github.com/ctic-sje-ifsc/armazenamento_distribuido_cloud-native_rook.io-ceph</tw-passagedata><tw-passagedata pid="34" name="TCC: Maria Luiza Theisges" tags="tcc melhorar" position="1848.3333333333335,557.4999999999999" size="100,100">monitoramento de infraestrutura e serviços através de análise de logs</tw-passagedata><tw-passagedata pid="35" name="TCC: Natan Martins Jory" tags="tcc melhorar" position="1643.3333333333335,550.8333333333334" size="100,100">Métodos Híbridos para gerenciamento de projetos de desenvolvimento de software</tw-passagedata><tw-passagedata pid="36" name="Kubernetes para Todos" tags="melhorar" position="2301.666666666667,1799.1666666666667" size="100,100">6 anos! Enfim! Em 2019 a materialização do [[Plano de Dominação Mundial]].
+
+
+A (link-reveal: &quot;literatura técnica 🔗&quot;)[(open-url: &quot;https://thenewstack.io/ebooks/&quot;)] no assunto.
+
+E o trabalho do [[Natan|TCC: Natan Martins Jory]], que foi realizado com a equipe de TI, podia agora se aplicar a qualquer novo projeto.
+
+Dar o exemplo: 
+Trello da TI: https://trello.com/b/uVXdjTxX/ctic-sje-ifsc
+Aprender Kubernetes: https://github.com/ctic-sje-ifsc/quero_aprender_kubernetes
+
+
+2019
+TCC do Gabriel: nuvem multicluster
+
+Foco nos serviços
+TCCs em andamento: temas discutidos
+- Chatbot
+- Processamento em CPU e GPU
+- CI/CD - defendido
+- Distribuição de arquivos por WebTorrent
+- Laboratórios remotos: até MQTT sobre HTTP via WebSocket.
+- Desenvolvimento de aplicações Web, em especial jogos sobre WebRTC.
+- Nuvem privada com 1 região e 3 zonas.
+
+Entender melhor a plataforma Web...
+</tw-passagedata><tw-passagedata pid="37" name="TCC: Gabriel de Souza" tags="tcc melhorar" position="2252.333333333333,550.8333333333335" size="100,100">Nuvem privada multizona usando orquestração de contêineres: Proposta multicâmpus de alta disponibilidade para o IFSC</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
