@@ -180,24 +180,24 @@ Foi a primeira nuvem privada, em caráter experimental, de São José. Na verdad
 
 Com esse recurso foi possível desenvolver, boa parte a distância, uma proposta real e tangível a ser apreciada por todos os envolvidos.
 ---
-Avançar para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="salão melhorar" position="1300.0000000000002,1201.3333333333335" size="200,100">Sobre cabeamento estruturado, tem o trabalho da [[Luana|TCC: Luana Beatriz da Silva]].
+Avançar para o [[Plano de Dominação Mundial]].</tw-passagedata><tw-passagedata pid="11" name="Salão dos TCCs" tags="salão" position="1300.0000000000002,1201.3333333333335" size="200,100">Sobre cabeamento estruturado, camada física, tem o trabalho da [[Luana|TCC: Luana Beatriz da Silva]]. Em relação a mapeamento de serviços, na camada de aplicação, o [[Alexandre|TCC: Alexandre Marquez Filho]] fez um trabalho de revisão.
 
-Em relação a mapeamento de serviços, o [[Alexandre|TCC: Alexandre Marquez Filho]] fez um trabalho de revisão.
+A primeira ideia de nuvem veio com o [[Rafael|TCC: Rafael Turnes da Silveira]], que estudou SDDC e SDN. Na sequência, o [[Nathan|TCC: Nathan Batista de Oliveira]] estudou o Kubernetes e o [[Raphael|TCC: Raphael Brito Reis]] pesquisou sistemas de arquivos distribuídos para a nova plataforma.
 
-Sobre SDDC, o [[Rafael|TCC: Rafael Turnes da Silveira]] estudou SDDC e SDN.
+Com o Kubernetes no ar, em produção, passamos a nos interessar em como prover armazenamento persistente, com a ajuda do [[Matuzalém|TCC: Matuzalém Müller dos Santos]], e da qualidade de alguns serviços críticos - como Matlab no ensino -, trabalho da [[Maria Luiza|TCC: Maria Luiza Theisges]]. E a qualidade não ficou apenas na aplicação, mas também no gerenciamento de projetos, com o [[Natan|TCC: Natan Martins Jory]]. Assim, a nuvem poderia atender ao Instituto todo, como escreveu o [[Gabriel|TCC: Gabriel de Souza]].</tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="tcc" position="1303,552.6666666666667" size="100,100">O detetive observa a distância a mesa, escondida por inúmeros documentos cor de sépia, alguns manchados com marcas de café. Ele sente que algo está estranho, algum fragmento fora de lugar. Então decide procurar no seu computador por padrões que ele não sabe explicar, apenas sente que estão ali, brincando perigosamente com vidas humanas.
 
-Quanto a pesquisa em contêineres, o [[Nathan|TCC: Nathan Batista de Oliveira]] estudou o Kubernetes. De forma complementar o [[Raphael|TCC: Raphael Brito Reis]] pesquisou sistemas de arquivos distribuídos para a nova plataforma.
+O cenário seria de um clássico filme *noir*, mas foi algo bem mais mundano. Menos romântico, também. Mas foi um trabalho de detetive mapear os serviços, com suas relações e dependências (acredita, dá trabalho). E algo revelador, de fato, apareceu: ao analisar as máquinas e seus serviços, foi uma lista de vários servidores, em especial HTTP, que poderiam ser agregados em apenas um.
 
-Com o Kubernetes no ar, passamos a nos interessar em como prover armazenamento persistente, com a ajuda do [[Matuzalém|TCC: Matuzalém Müller dos Santos]], e da qualidade de alguns serviços críticos, como Matlab, trabalho da [[Maria Luiza|TCC: Maria Luiza Theisges]].
+Por fim, foi proposto um modelo com uma visão sistêmica sobre o todo: máquinas virtuais redundantes para oferecerem serviços equivalentes. Os serviços, inclusive, foram organizados em três categorias:
+* **Gerência**: de uso exclusivo da TI, como por exemplo SSH e SNMP.
+* **Rede local**: de alcance reduzido na rede, servem para fornecer aos clientes recursos de rede, como por exemplo DHCP, DNS, LDAP e NTP.
+* **Internet**: os serviços voltados aos usuários finais. Estes, por sua vez, estavam subdivididos em:
+** **Compartilhamento de arquivos**: SMB/CIFS e HTTP.
+** **Comunicação**: correio eletrônico e outros, como POP3, IMAP e SMTP.
 
-TCC de gerenciamento de projetos do [[Natan|TCC: Natan Martins Jory]].</tw-passagedata><tw-passagedata pid="12" name="TCC: Alexandre Marquez Filho" tags="tcc melhorar" position="1303,552.6666666666667" size="100,100">O que se percebeu , ao analisar as máquinas virtuais e seus serviços, foi  uma lista de vários servidores, em especial HTTP, que poderiam ser agregados em apenas um. Feito o mapeamento de serviços, foram estabelecidas as relações e dependências (acredita, dá trabalho). Por fim, foi proposto um modelo com uma visão sistêmica sobre o todo: máquinas virtuais redundantes para oferecerem serviços equivalentes. Os serviços, inclusive, foram organizados em três categorias:
-* Gerência: de uso exclusivo da TI, como por exemplo SSH e SNMP.
-* Rede local: de alcance reduzido na rede, servem para fornecer aos clientes recursos de rede, como por exemplo DHCP, DNS, LDAP e NTP.
-* Internet: os serviços voltados aos usuários finais. Estes, por sua vez, estavam subdivididos em:
-** Compartilhamento de arquivos: SMB/CIFS e HTTP.
-** Comunicação: correio eletrônico e outros, como POP3, IMAP e SMTP.
+HTTP era a pista para o que viria a seguir...
 ---
-Avançar para [[SDDC]].</tw-passagedata><tw-passagedata pid="13" name="Rodapé: Desbloqueio de salões" tags="footer" position="1755.6666666666667,1455" size="100,100">(unless: (passage:)&#39;s tags contains &quot;fim&quot;)[(if: (passage:)&#39;s tags contains &quot;salão&quot;)[(if: (count: (history:), &quot;Plano de Dominação Mundial&quot;) is 0)[&lt;hr/&gt;Ainda não sabe o que é o [[Plano de Dominação Mundial]]?](else-if: (count: (history:), &quot;Plano de Dominação Mundial&quot;) is 1)[&lt;hr/&gt;Ir novamente para o [[Plano de Dominação Mundial]].](else:)[&lt;hr/&gt;Ir pela (print: (count: (history:), &quot;Plano de Dominação Mundial&quot;) + 1)a. vez para o [[Plano de Dominação Mundial]].]](else:)[(if: (history:) contains &quot;OpenStack&quot; and (passage:)&#39;s name is not &quot;Salão do OpenStack&quot;)[&lt;br/&gt;Ir para o [[Salão do OpenStack]].](if: $tccs is 5 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Desbloqueado o [[Salão dos TCCs]].](else-if: $tccs &gt;= 5 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Ir para o [[Salão dos TCCs]].](if: (history:) contains &quot;Kubernetes&quot; and (passage:)&#39;s name is not &quot;Salão do Kubernetes&quot;)[&lt;br/&gt;Ir para o [[Salão do Kubernetes]].]]]</tw-passagedata><tw-passagedata pid="14" name="Salão do OpenStack" tags="salão" position="1705.6666666666665,1201.6666666666665" size="200,100">O TCC do [[Rafael|TCC: Rafael Turnes da Silveira]] antecede o projeto de OpenStack do IFSC câmpus São José. Na sequência, há um movimento inicial do [[projeto de nuvem|OpenStack]] com [[infraestrutura como código|OpenStack e IaC]], o que gerou uma [[bela história em versões|OpenStack: história em versões]]: [[v1.0|OpenStack: v1.0]], [[v1.1|OpenStack: v1.1]] e [[v1.2|OpenStack: v1.2]] (e acabou por aí).</tw-passagedata><tw-passagedata pid="15" name="OpenStack e IaC" tags="" position="1501,199.33333333333334" size="100,100">Implantar e manter operacional o OpenStack foi um marco. Associado à implantação da nuvem privada, também estava em curso o desenvolvimento de uma ideia: a automatização de ambiente. Estava claro que manter um conjunto de servidores, qualquer que fosse o tamanho com OpenStack, seria inviável de forma manual. Havia muitos arquivos e serviços com informações correlacionadas. Era, portanto, um requisito essencial do sistema para possibilitar a sua manutenção: automatizar o máximo possível. E à época uma das ferramentas mais populares era o Puppet. E como basicamente todos os arquivos eram arquivos simples, de texto, o controle de versão dessa automatização deu origem à cultura de infraestrutura como código (IaC) que (link-reveal: &quot;temos até hoje no câmpus 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc&quot;)].
+Avançar para [[SDDC]].</tw-passagedata><tw-passagedata pid="13" name="Rodapé: Desbloqueio de salões" tags="footer" position="1755.6666666666667,1455" size="100,100">(unless: (passage:)&#39;s tags contains &quot;fim&quot;)[(if: (passage:)&#39;s tags contains &quot;salão&quot;)[(if: (count: (history:), &quot;Plano de Dominação Mundial&quot;) is 0)[&lt;hr/&gt;Ainda não sabe o que é o [[Plano de Dominação Mundial]]?](else-if: (count: (history:), &quot;Plano de Dominação Mundial&quot;) is 1)[&lt;hr/&gt;Ir novamente para o [[Plano de Dominação Mundial]].](else:)[&lt;hr/&gt;Ir pela (print: (count: (history:), &quot;Plano de Dominação Mundial&quot;) + 1)a. vez para o [[Plano de Dominação Mundial]].]](else:)[(if: (history:) contains &quot;OpenStack&quot; and (passage:)&#39;s name is not &quot;Salão do OpenStack&quot;)[&lt;br/&gt;Ir para o [[Salão do OpenStack]].](if: $tccs is 6 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Desbloqueado o [[Salão dos TCCs]].](else-if: $tccs &gt;= 6 and (passage:)&#39;s name is not &quot;Salão dos TCCs&quot;)[&lt;br/&gt;Ir para o [[Salão dos TCCs]].](if: (history:) contains &quot;Kubernetes&quot; and (passage:)&#39;s name is not &quot;Salão do Kubernetes&quot;)[&lt;br/&gt;Ir para o [[Salão do Kubernetes]].]]]</tw-passagedata><tw-passagedata pid="14" name="Salão do OpenStack" tags="salão" position="1705.6666666666665,1201.6666666666665" size="200,100">O TCC do [[Rafael|TCC: Rafael Turnes da Silveira]] antecede o projeto de OpenStack do IFSC câmpus São José. Na sequência, há um movimento inicial do [[projeto de nuvem|OpenStack]] com [[infraestrutura como código|OpenStack e IaC]], o que gerou uma [[bela história em versões|OpenStack: história em versões]]: [[v1.0|OpenStack: v1.0]], [[v1.1|OpenStack: v1.1]] e [[v1.2|OpenStack: v1.2]] (e acabou por aí).</tw-passagedata><tw-passagedata pid="15" name="OpenStack e IaC" tags="" position="1501,199.33333333333334" size="100,100">Implantar e manter operacional o OpenStack foi um marco. Associado à implantação da nuvem privada, também estava em curso o desenvolvimento de uma ideia: a automatização de ambiente. Estava claro que manter um conjunto de servidores, qualquer que fosse o tamanho com OpenStack, seria inviável de forma manual. Havia muitos arquivos e serviços com informações correlacionadas. Era, portanto, um requisito essencial do sistema para possibilitar a sua manutenção: automatizar o máximo possível. E à época uma das ferramentas mais populares era o Puppet. E como basicamente todos os arquivos eram arquivos simples, de texto, o controle de versão dessa automatização deu origem à cultura de infraestrutura como código (IaC) que (link-reveal: &quot;temos até hoje no câmpus 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc&quot;)].
 
 Com a escolha do Puppet, foi possível experimentar, testar, validar, documentar o código. A ideia de um servidor central, com controle de versão de todos os arquivos, garantia os estados de pacotes, arquivos de configuração e serviços em execução, permitindo até a manutenção periódica dos sistemas (garantindo que atualizações automática dos SOs não afetassem os serviços, embora o risco fosse baixo). Porém, mais importante que essa automatização era a cultura DevOps em implantar e manter toda uma nova infraestrutura em construção. O OpenStack não era configurado: era programado.
 ---
@@ -337,11 +337,10 @@ O Ceph foi desativado. Um servidor NFS, (link-reveal: &quot;feito com FreeNAS �
 ---
 Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="28" name="Serviços sobre Kubernetes" tags="" position="2501.333333333333,1362.3333333333335" size="100,100">As camadas [[física|Cabeamento Estruturado]], [[enlace|Protocolos da Camada de Enlace]] e [[de rede|Protocolos da Camada de Rede]] operavam em velocidade de cruzeiro há tempos. O [[Rancher|Kubernetes sobre Rancher]], de uma forma geral, resolvia a segunda parte do problema.
 
-O ano de 2018 foi então dedicado aos serviços sobre Kubernetes. E muita luta no *front* acadêmico. Os TCCs - como os da Maria Luiza Theisges e do Matuzalém Müller dos Santos - passaram a focar nos serviços oferecidos em cima da nuvem, abstraindo praticamente tudo desde a camada física até a camada de aplicação, entregando apenas uma API para publicar aplicações e serviços. O resultado? Conseguimos migrar quase todas as aplicações. Assim, Kubernetes virou a nossa plataforma de desenvolvimento ágil. A ideia ficou tão boa que o Gabriel de Souza pensou em expandi-la para todo o IFSC: uma nuvem multicluster. [[Lembra?|Plano de Dominação Mundial]] 
+O ano de 2018 foi então dedicado aos serviços sobre Kubernetes. E muita luta no *front* acadêmico. Os TCCs - como os da Maria Luiza Theisges e do Matuzalém Müller dos Santos - passaram a focar nos serviços oferecidos em cima da nuvem, abstraindo praticamente tudo desde a camada física até a camada de aplicação, entregando apenas uma API para publicar aplicações e serviços. O resultado? Conseguimos migrar quase todas as aplicações. Assim, Kubernetes virou a nossa plataforma de desenvolvimento ágil.
 ---
 Ler sobre o [[TCC da Maria Luiza|TCC: Maria Luiza Theisges]].
 Ler sobre o [[TCC do Matuzalém|TCC: Matuzalém Müller dos Santos]].
-Ler sobre o [[TCC do Gabriel|TCC: Gabriel de Souza]].
 Avançar para [[Kubernetes como Plataforma]].</tw-passagedata><tw-passagedata pid="29" name="Kubernetes como Plataforma" tags="" position="2499.6666666666665,1602.3333333333335" size="100,100">Desde o [[ponto de inflexão|Ponto de inflexão]], o que mais se destacou na cultura DevOps da TI foi, na minha opinião, a documentação de todo o sistema em vários repositórios de controle de versão:
 * (link-reveal: &quot;Documentação da infraestrutura física e lógica 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/infraestrutura&quot;)]: documentação da redundância física e lógica do cabeamento estruturado - (link-reveal: &quot;desde 2012 🔗&quot;)[(open-url: &quot;https://ifscnasnuvens.blogspot.com/&quot;)] - e protocolos da camada de enlace. (if: (history:) contains &quot;TCC: Luana Beatriz da Silva&quot;)[Mas tu já sabes que isso é [[graças a Luana|TCC: Luana Beatriz da Silva]], né?](else:)[Claro, isso não seria possível sem o [[TCC da Luana|TCC: Luana Beatriz da Silva]].]
 * Sistemas operacionais das máquinas físicas: os (link-reveal: &quot;virtualizadores 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/baremetal_rke_kubernetes&quot;)].
@@ -372,22 +371,19 @@ Avançar para [[Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="
 ---
 Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="34" name="TCC: Maria Luiza Theisges" tags="tcc melhorar" position="2056.6666666666665,704.1666666666666" size="100,100">monitoramento de infraestrutura e serviços através de análise de logs
 ---
-Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="35" name="TCC: Natan Martins Jory" tags="tcc melhorar" position="1901.6666666666667,550.8333333333334" size="100,100">Métodos Híbridos para gerenciamento de projetos de desenvolvimento de software</tw-passagedata><tw-passagedata pid="36" name="Kubernetes para Todos" tags="melhorar" position="2301.666666666667,1699.1666666666667" size="100,100">6 anos! Enfim! Em 2019 a materialização do [[Plano de Dominação Mundial]].
+Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="35" name="TCC: Natan Martins Jory" tags="tcc melhorar" position="1901.6666666666667,550.8333333333334" size="100,100">Métodos Híbridos para gerenciamento de projetos de desenvolvimento de software
+---
+Avançar para [[Developers, Developers, Developers]].</tw-passagedata><tw-passagedata pid="36" name="Kubernetes para Todos" tags="" position="2301.666666666667,1699.1666666666667" size="100,100">Foram algumas noites (muito produtivas) lendo sobre (link-reveal: &quot;OpenStack 🔗&quot;)[(open-url: &quot;https://docs.openstack.org/&quot;)], (link-reveal: &quot;Kubernetes 🔗&quot;)[(open-url: &quot;https://kubernetes.io/docs/&quot;)] e seu (link-reveal: &quot;ecossistema 🔗&quot;)[(open-url: &quot;https://thenewstack.io/ebooks/&quot;)]. E, claro, muito, muito (link-reveal: &quot;Stack Overflow 🔗&quot;)[(open-url: &quot;https://stackoverflow.com/&quot;)]. Mas era algo restrito ao clube fechado da TI.
 
+Hoje os tempos são outros. A infraestrutura funciona. Podemos (devemos!) pensar em oferecer para ensino, pesquisa e extensão. E a proposta de nuvem *multicluster* para todo o IFSC do Gabriel amplia e refina o que fazemos em São José. O TCC do Natan, que tratou de métodos híbridos para gerenciamento de projetos de desenvolvimento de *software* (que foi inclusive (link-reveal: &quot;aplicado na equipe de TI 🔗&quot;)[(open-url: &quot;https://trello.com/b/uVXdjTxX/ctic-sje-ifsc&quot;)]), pode (deve!) ser usado para desenvolvimento de *software* nativo de nuvem usando metodologia ágil feito no Instituto (a frase extensa é proposital). 
 
-A (link-reveal: &quot;literatura técnica 🔗&quot;)[(open-url: &quot;https://thenewstack.io/ebooks/&quot;)] no assunto.
-
-E o trabalho do [[Natan|TCC: Natan Martins Jory]], que foi realizado com a equipe de TI, podia agora se aplicar a qualquer novo projeto.
-
-Dar o exemplo: 
-Trello da TI: https://trello.com/b/uVXdjTxX/ctic-sje-ifsc
-Aprender Kubernetes: https://github.com/ctic-sje-ifsc/quero_aprender_kubernetes
-
-
-2019
-TCC do Gabriel: nuvem multicluster
-
-Foco nos serviços
+Em 2019, colocamos no papel o [[Plano de Dominação Mundial]]. Agora é hora de executar.
+---
+Ler sobre o [[TCC do Natan|TCC: Natan Martins Jory]].
+Ler sobre o [[TCC do Gabriel|TCC: Gabriel de Souza]].
+Avançar para [[Developers, Developers, Developers]].</tw-passagedata><tw-passagedata pid="37" name="TCC: Gabriel de Souza" tags="tcc melhorar" position="2298.9999999999995,700.8333333333334" size="100,100">Nuvem privada multizona usando orquestração de contêineres: Proposta multicâmpus de alta disponibilidade para o IFSC
+---
+Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="38" name="Developers, Developers, Developers" tags="melhorar" position="2100,1700.8333333333337" size="100,100">Foco nos serviços
 TCCs em andamento: temas discutidos
 - Chatbot
 - Processamento em CPU e GPU
@@ -398,10 +394,10 @@ TCCs em andamento: temas discutidos
 - Nuvem privada com 1 região e 3 zonas.
 
 Entender melhor a plataforma Web...
----
-Avançar para [[Developers, Developers, Developers]].</tw-passagedata><tw-passagedata pid="37" name="TCC: Gabriel de Souza" tags="tcc melhorar" position="2298.9999999999995,700.8333333333334" size="100,100">Nuvem privada multizona usando orquestração de contêineres: Proposta multicâmpus de alta disponibilidade para o IFSC
----
-Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="38" name="Developers, Developers, Developers" tags="melhorar" position="2100,1700.8333333333337" size="100,100">Os aplicativos usados pela equipe de TI são IDE (Visual Studio Code) integrada com controle de versão distribuído (GitHub) e mural de cartões (Trello). Web. APIs. CLI a gosto.
+
+
+
+Os aplicativos usados pela equipe de TI são IDE (Visual Studio Code) integrada com controle de versão distribuído (GitHub) e mural de cartões (Trello). Web. APIs. CLI a gosto.
 
 Sintonia entre o que fazemos na TI e as minhas aulas. Além da pesquisa: agora é aplicação no ensino.
 
