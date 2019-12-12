@@ -291,7 +291,7 @@ Com Kubernetes e Ceph, houve redes internas (faixas privadas ou ULA), redes virt
 
 Mas ele estava sobre os ombros de gigantes. Mais especificamente, do Google.
 ---
-Ler sobre o TCC do [[Raphael|TCC: Raphael Brito Reis]].
+Ler sobre o [[TCC do Raphael|TCC: Raphael Brito Reis]].
 (if: (history:) contains &quot;Protocolos da Camada de Enlace&quot;)[Relembrar os [[Protocolos da Camada de Enlace]].
 ](if: (history:) contains &quot;Protocolos da Camada de Rede&quot;)[Relembrar os [[Protocolos da Camada de Rede]].
 ](if: (history:) contains &quot;Ponto de inflexão&quot;)[Voltar para [[Ponto de inflexão]].](else:)[Avançar para [[Ponto de inflexão]].](if: (history:) contains &quot;Kubernetes&quot;)[&lt;br/&gt;Avançar para [[Kubernetes]].]</tw-passagedata><tw-passagedata pid="23" name="TCC: Raphael Brito Reis" tags="tcc" position="1601.6666666666667,552" size="100,100">//Espere com paciência, ataque com rapidez.//
@@ -375,7 +375,7 @@ Avançar para [[Kubernetes como Plataforma]].</tw-passagedata><tw-passagedata pi
 * (link-reveal: &quot;Serviços em rede 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/servicos_kubernetes&quot;)]: aplicações voltadas aos usuários finais, inclusive (link-reveal: &quot;atividades de ensino 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/servicos_kubernetes/tree/2017.2/srv/ensino&quot;)].
 * Automatização das estações de trabalho do câmpus: além dos servidores, as estações de trabalho são mantidas sob gerenciamento de configuração com controle de versão. Primeiro  (link-reveal: &quot;Puppet 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/gerenciamento_config_puppet&quot;)], agora (link-reveal: &quot;Ansible 🔗&quot;)[(open-url: &quot;https://github.com/ctic-sje-ifsc/ansible&quot;)].
 
-Era hora de mostrar ao mundo!
+Perdemos o medo da chuva. Agora era hora de mostrar ao mundo!
 ---
 Avançar para [[Kubernetes para Todos]].</tw-passagedata><tw-passagedata pid="30" name="Salão do Kubernetes" tags="salão" position="2101,1199" size="200,100">Não havia dúvidas que [[Kubernetes]] atenderia melhor a nossa demanda, mas e **manter essa infraestrutura**?  [[Experimentações com Kubernetes]] foram feitas usando [[CoreOS|Kubernetes sobre CoreOS]]. Depois, entramos em produção com o [[Rancher|Kubernetes sobre Rancher]].
 
@@ -399,7 +399,7 @@ netbox.sj.ifsc.edu.br
 ---
 Avançar para [[Mapeamento de Serviços]].</tw-passagedata><tw-passagedata pid="33" name="TCC: Matuzalém Müller dos Santos" tags="tcc melhorar" position="2208,550" size="100,100">https://github.com/ctic-sje-ifsc/armazenamento_distribuido_cloud-native_rook.io-ceph
 ---
-Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="34" name="TCC: Maria Luiza Theisges" tags="tcc melhorar" position="2056,704" size="100,100">monitoramento de infraestrutura e serviços através de análise de logs
+Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="34" name="TCC: Maria Luiza Theisges" tags="tcc melhorar" position="2051,700.6666666666666" size="100,100">monitoramento de infraestrutura e serviços através de análise de logs
 ---
 Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="35" name="TCC: Natan Martins Jory" tags="tcc melhorar" position="1901,550" size="100,100">Métodos Híbridos para gerenciamento de projetos de desenvolvimento de software
 ---
@@ -413,29 +413,34 @@ Ler sobre o [[TCC do Natan|TCC: Natan Martins Jory]].
 Ler sobre o [[TCC do Gabriel|TCC: Gabriel de Souza]].
 Avançar para [[Developers, Developers, Developers]].</tw-passagedata><tw-passagedata pid="37" name="TCC: Gabriel de Souza" tags="tcc melhorar" position="2298,700" size="100,100">Nuvem privada multizona usando orquestração de contêineres: Proposta multicâmpus de alta disponibilidade para o IFSC
 ---
-Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="38" name="Developers, Developers, Developers" tags="melhorar" position="2100,1700" size="100,100">Foco nos serviços
-TCCs em andamento: temas discutidos
-- Chatbot
-- Processamento em CPU e GPU
-- CI/CD - defendido
-- Distribuição de arquivos por WebTorrent
-- Laboratórios remotos: até MQTT sobre HTTP via WebSocket.
-- Desenvolvimento de aplicações Web, em especial jogos sobre WebRTC.
-- Nuvem privada com 1 região e 3 zonas.
+Avançar para [[Serviços sobre Kubernetes]].</tw-passagedata><tw-passagedata pid="38" name="Developers, Developers, Developers" tags="" position="2100,1700" size="100,100">Chegamos ao final de 2019.  Iniciamos o retorno da Jornada do Herói. Descemos até a caverna mais escura da alma, quando nos defrontamos com o nosso maior medo: ainda seremos relevantes como TI?
 
-Entender melhor a plataforma Web...
+Transcendemos a dúvida. Para ser sincero, não nos preocupamos mais com isso. //Eu tenho uma porção de coisas grandes pra conquistar. E eu não posso ficar aí parado.//
 
+Com o foco em desenvolvimento de soluções, mais especificamente aquelas baseadas na arquitetura de microsserviços, foram defendidos recentemente dois TCCs:
+0. Em julho, a Letícia projetou laboratórios remotos usando MQTT sobre WebSockets: controle e observação remotos dos laboratórios usando conceitos de IoT e Web para projetar sistemas em escala em tempo real via WebRTC.
+0. Em agosto, o Guilherme construiu um sistema de moderação de código em controle de versão: fazer CI/CD integrado ao Kubernetes, perfazendo todo o ciclo de desenvolvimento até a publicação da aplicação? //Shut up and take my money!//
 
+Há também outros TCCs em andamento para contribuir com a cultura de desenvolvimento de aplicações nativas de nuvem (//cloud native//):
+0. Desenvolvimento de //chatbot// para controle remoto dos objetos Kubernetes: que qualquer aluno/professor possa criar objetos e controlá-los via API ou //chatbot//, podendo nesse último caso criar macros para automatizar tarefas.
+0. Processamento dedicado em GPU: para aplicações específicas que demandam mais recursos como MATLAB e Octave, aplicações de aprendizado de máquina com Python(click-replace: &quot;aplicações de aprendizado de máquina com Python&quot;)[o [[TCC da Maria|TCC: Maria Luiza Theisges]]], entre outros.
+0. Distribuição de arquivos por WebTorrent: compartilhamento de arquivos sobre HTTP utilizando os próprios clientes como replicadores do conteúdo, algo bastante interessante nas atividades relacionadas a ensino a distância.
+0. Desenvolvimento de //plugin// para jogos HTML5/Javascript/TypeScript **em rede e em tempo real** com WebRTC.
 
-Os aplicativos usados pela equipe de TI são IDE (Visual Studio Code) integrada com controle de versão distribuído (GitHub) e mural de cartões (Trello). Web. APIs. CLI a gosto.
-
-Sintonia entre o que fazemos na TI e as minhas aulas. Além da pesquisa: agora é aplicação no ensino.
-
-Metodologia de desenvolvimento baseada em projetos para jogos Web. Melhor: PWA.
+Eu disse jogos?
 ---
-Avançar para [[Jogos]].</tw-passagedata><tw-passagedata pid="39" name="Jogos" tags="melhorar fim" position="1900,1702" size="100,100">Uso de metodologia baseada em jogos para ensino de tecnologias, em especial programação em rede.
+Ler sobre o [[TCC da Letícia|TCC: Letícia Aparecida Coelho]].
+Ler sobre o [[TCC do Guilherme|TCC: Guilherme Evangelista de Albuquerque]].
+Avançar para [[Jogos]].</tw-passagedata><tw-passagedata pid="39" name="Jogos" tags="melhorar fim" position="1900,1702" size="100,100">E como os resultados de (link-reveal: &quot;desenvolvimento de jogos HTML5 e Javascript usando Phaser 3 🔗&quot;)[(open-url: &quot;https://github.com/boidacarapreta/catalogo-de-jogos#no-ifsc-câmpus-são-josé&quot;)] no ensino médio foram muito além do esperado, já vislumbro novos cainhos: PWA.
 
-Como, por exemplo, [[este livro|Sobre o Livro]].</tw-passagedata><tw-passagedata pid="40" name="Cabeçalho: contador de leitura de TCC" tags="header" position="801,401" size="100,100">(if: (passage:)&#39;s tags contains &quot;tcc&quot;)[(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]]</tw-passagedata></tw-storydata>
+
+Uso de metodologia baseada em jogos para ensino de tecnologias, em especial programação em rede.
+
+Como, por exemplo, [[este livro|Sobre o Livro]].</tw-passagedata><tw-passagedata pid="40" name="Cabeçalho: contador de leitura de TCC" tags="header" position="801,401" size="100,100">(if: (passage:)&#39;s tags contains &quot;tcc&quot;)[(unless: (history:) contains (passage:)&#39;s name)[(set: $tccs to it + 1)]]</tw-passagedata><tw-passagedata pid="41" name="TCC: Guilherme Evangelista de Albuquerque" tags="tcc melhorar" position="2151.6666666666665,899.1666666666669" size="100,100">(link-reveal: &quot;Plataforma de Controle de Versão e Moderação de Código Orientada a SaaS para o Instituto Federal de Santa Catarina Câmpus São José 🔗&quot;)[(open-url: &quot;https://wiki.sj.ifsc.edu.br/wiki/images/0/04/TCC290_Guilherme_Evangelista_de_Albuquerque.pdf&quot;)]
+---
+(if: (history:) contains &quot;Developers, Developers, Developers&quot;)[Voltar para [[Ponto de inflexão]].](else:)[Avançar para [[Developers, Developers, Developers]] .]</tw-passagedata><tw-passagedata pid="42" name="TCC: Letícia Aparecida Coelho" tags="tcc melhorar" position="1951.666666666667,900.8333333333333" size="100,100">(link-reveal: &quot;Infraestrutura de Internet das Coisas aplicada a laboratórios remotos usando WebRTC e microsserviços 🔗&quot;)[(open-url: &quot;https://wiki.sj.ifsc.edu.br/wiki/images/5/5c/TCC290_Leticia_Aparecida_Coelho.pdf&quot;)]
+---
+(if: (history:) contains &quot;Developers, Developers, Developers&quot;)[Voltar para [[Ponto de inflexão]].](else:)[Avançar para [[Developers, Developers, Developers]] .]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
