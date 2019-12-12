@@ -333,7 +333,7 @@ Avançar para [[Kubernetes sobre CoreOS]].</tw-passagedata><tw-passagedata pid="
 🎮 Slot C | (link:&quot;Salvar&quot;)[(if:(save-game:&quot;Slot C&quot;))[Salvo!](else:)[//I&#39;m sorry Dave, I&#39;m afraid I can&#39;t do that//]] | (if: (saved-games:) contains &quot;Slot C&quot;)[(link:&quot;Recuperar&quot;)[(load-game: &quot;Slot C&quot;)]](else:)[(text-style:&quot;blurrier&quot;)[Recuperar]] |
 🎮 Slot D | (link:&quot;Salvar&quot;)[(if:(save-game:&quot;Slot D&quot;))[Salvo!](else:)[//I&#39;m sorry Dave, I&#39;m afraid I can&#39;t do that//]] | (if: (saved-games:) contains &quot;Slot D&quot;)[(link:&quot;Recuperar&quot;)[(load-game: &quot;Slot D&quot;)]](else:)[(text-style:&quot;blurrier&quot;)[Recuperar]] |
 ---
-(if: (history:)&#39;s length is 0)[🧭 Início da Jornada → ](else:)[|chamada&gt;[(link:&quot;🧭 Jornada do Leitor ((print: (history: )&#39;s length)) → &quot;)[(show:?jornada)]]|jornada)[🧭 (for: each _passagem, ...(history:))[[[_passagem]] → ]]](print: (passage:)&#39;s name)
+(if: (history:)&#39;s length is 0)[🗺️ Início da Jornada → ](else:)[|chamada&gt;[(link:&quot;🗺️ Jornada do Leitor ((print: (history: )&#39;s length)) → &quot;)[(show:?jornada)]]|jornada)[🧭 (for: each _passagem, ...(history:))[[[_passagem]] → ]]](print: (passage:)&#39;s name)
 ---
 </tw-passagedata><tw-passagedata pid="26" name="Kubernetes sobre CoreOS" tags="" position="2502,1001" size="100,100">Ouroboros. O ciclo se repete: um sistema base com instalação automatizada,  montado aos poucos, em pequenos blocos graduais. Sai o Ubuntu (sysvinit + upstart) com Puppet e OpenStack, entra CoreOS (systemd) com cloud-config e Kubernetes.
 
