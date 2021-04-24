@@ -4,4 +4,4 @@ Livro com estrutura não linear que conta a história da computação em nuvem p
 feito por mim e a [equipe de TI](https://wordpress.sj.ifsc.edu.br/ctic-sje/).
 
 Endereço para leitura:
-https://pdm.boidacarapreta.cc
+https://boidacarapreta.github.io/pdm/
